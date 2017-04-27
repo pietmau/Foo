@@ -34,17 +34,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: New Photo
     @IBAction func onNewPhoto(sender: AnyObject) {
         let actionSheet = UIAlertController(title: "New Photo", message: nil, preferredStyle: .ActionSheet)
-        
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { action in
             self.showCamera()
         }))
-        
         actionSheet.addAction(UIAlertAction(title: "Album", style: .Default, handler: { action in
             self.showAlbum()
         }))
-        
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        
         self.presentViewController(actionSheet, animated: true, completion: nil)
     }
     
@@ -89,17 +85,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func showSecondaryMenu() {
         view.addSubview(secondaryMenu)
-        
-        let bottomConstraint = secondaryMenu.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
-        let leftConstraint = secondaryMenu.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
-        let rightConstraint = secondaryMenu.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
-        
-        let heightConstraint = secondaryMenu.heightAnchor.constraintEqualToConstant(44)
-        
-        NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
-        
+        NSLayoutConstraint.activateConstraints(ConstrainMaker(secondaryMenu: secondaryMenu, bottomMenu: bottomMenu, view: view).makeConstraints())
         view.layoutIfNeeded()
-        
         self.secondaryMenu.alpha = 0
         UIView.animateWithDuration(0.4) {
             self.secondaryMenu.alpha = 1.0
