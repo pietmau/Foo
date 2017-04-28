@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func onPurpleSelected(sender: AnyObject) {
-        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Purple Max").run()
+        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run()
     }
 
     override func viewDidLoad() {
@@ -86,23 +86,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showSecondaryMenu() {
-        view.addSubview(secondaryMenu)
-        NSLayoutConstraint.activateConstraints(ConstrainMaker(secondaryMenu: secondaryMenu, bottomMenu: bottomMenu, view: view).makeConstraints())
-        view.layoutIfNeeded()
-        self.secondaryMenu.alpha = 0
-        UIView.animateWithDuration(0.4) {
-            self.secondaryMenu.alpha = 1.0
-        }
+        Helper.showSecondaryMenu(view, secondaryMenu: secondaryMenu, bottomMenu: bottomMenu)
     }
 
     func hideSecondaryMenu() {
-        UIView.animateWithDuration(0.4, animations: {
-            self.secondaryMenu.alpha = 0
-        }) { completed in
-            if completed == true {
-                self.secondaryMenu.removeFromSuperview()
-            }
-        }
+        Helper.hideSecondaryMenu(secondaryMenu)
     }
 
 }
