@@ -104,22 +104,37 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-Kp-614">
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="128"/>
                                     <state key="normal" title="Red"/>
+                                    <connections>
+                                        <action selector="onRedSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGA-XN-DX8"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axt-GK-a6m">
                                     <rect key="frame" x="48" y="0.0" width="48" height="128"/>
                                     <state key="normal" title="Green"/>
+                                    <connections>
+                                        <action selector="onGreenSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz1-yD-xul"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-be-bSy">
                                     <rect key="frame" x="96" y="0.0" width="48" height="128"/>
                                     <state key="normal" title="Blue"/>
+                                    <connections>
+                                        <action selector="onBlueSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbb-4d-ckh"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUq-ef-bpc">
                                     <rect key="frame" x="144" y="0.0" width="48" height="128"/>
                                     <state key="normal" title="Yellow"/>
+                                    <connections>
+                                        <action selector="onYellowSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xl6-MJ-J3B"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-VM-YCw">
                                     <rect key="frame" x="192" y="0.0" width="48" height="128"/>
                                     <state key="normal" title="Purple"/>
+                                    <connections>
+                                        <action selector="onPurpleSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUD-1Y-TvG"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

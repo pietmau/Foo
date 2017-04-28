@@ -9,16 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate {
-
     var filteredImage: UIImage?
-
     @IBOutlet var imageView: UIImageView!
-
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
-
     @IBOutlet var filterButton: UIButton!
 
+    @IBAction func onGreenSelected(sender: AnyObject) {
+    }
+    
+    @IBAction func onRedSelected(sender: AnyObject) {
+    }
+    
+    @IBAction func onBlueSelected(sender: AnyObject) {
+    }
+    
+    @IBAction func onYellowSelected(sender: AnyObject) {
+    }
+    
+    @IBAction func onPurpleSelected(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
