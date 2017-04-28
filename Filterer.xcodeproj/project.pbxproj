@@ -13,7 +13,17 @@
 		4DC1999F1BB201E100AA75E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC1999E1BB201E100AA75E7 /* Assets.xcassets */; };
 		4DC199A21BB201E100AA75E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC199A01BB201E100AA75E7 /* LaunchScreen.storyboard */; };
 		4DC199AA1BB2049F00AA75E7 /* RGBAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */; };
-		AF0CC8B31EB2939900A38A3B /* ConstrainMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0CC8B21EB2939900A38A3B /* ConstrainMaker.swift */; };
+		AF80D9451EB3D9FA009B88E5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9441EB3D9FA009B88E5 /* Color.swift */; };
+		AF80D9471EB3DA35009B88E5 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9461EB3DA35009B88E5 /* Exception.swift */; };
+		AF80D9491EB3DA4C009B88E5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9481EB3DA4C009B88E5 /* Filter.swift */; };
+		AF80D94B1EB3DA70009B88E5 /* GenericFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D94A1EB3DA70009B88E5 /* GenericFilter.swift */; };
+		AF80D94D1EB3DA91009B88E5 /* PredifinedFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D94C1EB3DA91009B88E5 /* PredifinedFilters.swift */; };
+		AF80D94F1EB3DAB6009B88E5 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D94E1EB3DAB6009B88E5 /* Processor.swift */; };
+		AF80D9511EB3DADB009B88E5 /* SimpleRedFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9501EB3DADB009B88E5 /* SimpleRedFilter.swift */; };
+		AF80D9551EB3DB83009B88E5 /* ActionSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9541EB3DB83009B88E5 /* ActionSheetContainer.swift */; };
+		C547402AFDA100B74593C7E0 /* ConstrainMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54747CB56FE5784EB78DA0E /* ConstrainMaker.swift */; };
+		C5474D39FA8828C22A19991E /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54744EEED3A8AFD8CCB1184 /* CameraPicker.swift */; };
+		C5474DA49080757D9844CBEC /* PhotoLibraryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547425306E3F500007C71CA /* PhotoLibraryPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +35,17 @@
 		4DC199A11BB201E100AA75E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC199A31BB201E100AA75E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
-		AF0CC8B21EB2939900A38A3B /* ConstrainMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstrainMaker.swift; sourceTree = "<group>"; };
+		AF80D9441EB3D9FA009B88E5 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AF80D9461EB3DA35009B88E5 /* Exception.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
+		AF80D9481EB3DA4C009B88E5 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		AF80D94A1EB3DA70009B88E5 /* GenericFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericFilter.swift; sourceTree = "<group>"; };
+		AF80D94C1EB3DA91009B88E5 /* PredifinedFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredifinedFilters.swift; sourceTree = "<group>"; };
+		AF80D94E1EB3DAB6009B88E5 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		AF80D9501EB3DADB009B88E5 /* SimpleRedFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleRedFilter.swift; sourceTree = "<group>"; };
+		AF80D9541EB3DB83009B88E5 /* ActionSheetContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionSheetContainer.swift; path = ../ActionSheetContainer.swift; sourceTree = "<group>"; };
+		C547425306E3F500007C71CA /* PhotoLibraryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPicker.swift; sourceTree = "<group>"; };
+		C54744EEED3A8AFD8CCB1184 /* CameraPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		C54747CB56FE5784EB78DA0E /* ConstrainMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstrainMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +78,42 @@
 		4DC199961BB201E100AA75E7 /* Filterer */ = {
 			isa = PBXGroup;
 			children = (
-				AF0CC8B21EB2939900A38A3B /* ConstrainMaker.swift */,
+				AF910E921EB3D89B003B96CE /* MyFilters */,
+				AF80D9541EB3DB83009B88E5 /* ActionSheetContainer.swift */,
 				4DC199971BB201E100AA75E7 /* AppDelegate.swift */,
 				4DC199991BB201E100AA75E7 /* ViewController.swift */,
-				4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */,
 				4DC1999B1BB201E100AA75E7 /* Main.storyboard */,
 				4DC1999E1BB201E100AA75E7 /* Assets.xcassets */,
 				4DC199A01BB201E100AA75E7 /* LaunchScreen.storyboard */,
 				4DC199A31BB201E100AA75E7 /* Info.plist */,
+				C5474928B4FAADAB826AD2D1 /* MyClasses */,
 			);
 			path = Filterer;
+			sourceTree = "<group>";
+		};
+		AF910E921EB3D89B003B96CE /* MyFilters */ = {
+			isa = PBXGroup;
+			children = (
+				4DC199A91BB2049F00AA75E7 /* RGBAImage.swift */,
+				AF80D9441EB3D9FA009B88E5 /* Color.swift */,
+				AF80D9461EB3DA35009B88E5 /* Exception.swift */,
+				AF80D9481EB3DA4C009B88E5 /* Filter.swift */,
+				AF80D94A1EB3DA70009B88E5 /* GenericFilter.swift */,
+				AF80D94C1EB3DA91009B88E5 /* PredifinedFilters.swift */,
+				AF80D94E1EB3DAB6009B88E5 /* Processor.swift */,
+				AF80D9501EB3DADB009B88E5 /* SimpleRedFilter.swift */,
+			);
+			name = MyFilters;
+			sourceTree = "<group>";
+		};
+		C5474928B4FAADAB826AD2D1 /* MyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C54744EEED3A8AFD8CCB1184 /* CameraPicker.swift */,
+				C54747CB56FE5784EB78DA0E /* ConstrainMaker.swift */,
+				C547425306E3F500007C71CA /* PhotoLibraryPicker.swift */,
+			);
+			path = MyClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +186,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0CC8B31EB2939900A38A3B /* ConstrainMaker.swift in Sources */,
+				AF80D94D1EB3DA91009B88E5 /* PredifinedFilters.swift in Sources */,
+				AF80D9491EB3DA4C009B88E5 /* Filter.swift in Sources */,
+				AF80D94B1EB3DA70009B88E5 /* GenericFilter.swift in Sources */,
 				4DC1999A1BB201E100AA75E7 /* ViewController.swift in Sources */,
+				AF80D9511EB3DADB009B88E5 /* SimpleRedFilter.swift in Sources */,
 				4DC199AA1BB2049F00AA75E7 /* RGBAImage.swift in Sources */,
+				AF80D94F1EB3DAB6009B88E5 /* Processor.swift in Sources */,
+				AF80D9471EB3DA35009B88E5 /* Exception.swift in Sources */,
+				AF80D9451EB3D9FA009B88E5 /* Color.swift in Sources */,
 				4DC199981BB201E100AA75E7 /* AppDelegate.swift in Sources */,
+				AF80D9551EB3DB83009B88E5 /* ActionSheetContainer.swift in Sources */,
+				C5474D39FA8828C22A19991E /* CameraPicker.swift in Sources */,
+				C547402AFDA100B74593C7E0 /* ConstrainMaker.swift in Sources */,
+				C5474DA49080757D9844CBEC /* PhotoLibraryPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
