@@ -16,20 +16,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var filterButton: UIButton!
 
     @IBAction func onGreenSelected(sender: AnyObject) {
+        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Green Max").run()
     }
-    
+
     @IBAction func onRedSelected(sender: AnyObject) {
+        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run()
     }
-    
+
     @IBAction func onBlueSelected(sender: AnyObject) {
+        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Blue Max").run()
     }
-    
+
     @IBAction func onYellowSelected(sender: AnyObject) {
+        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Yellow Max").run()
     }
-    
+
     @IBAction func onPurpleSelected(sender: AnyObject) {
+        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Purple Max").run()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)

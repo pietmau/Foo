@@ -1,4 +1,3 @@
-
 //
 //  PredifinedFilters.swift
 //  Filterer
@@ -7,10 +6,11 @@
 //  Copyright © 2017 UofT. All rights reserved.
 //
 
+
 public struct PredifinedFilters {
-    var predefined : [String:Filter]
-    
-    public init(){
+    var predefined: [String: Filter]
+
+    public init() {
         predefined = [:]
         predefined["Red 0"] = RedZero()
         predefined["Red Max"] = RedMax()
@@ -18,47 +18,61 @@ public struct PredifinedFilters {
         predefined["Blue Max"] = BlueMax()
         predefined["Green 0"] = GreenZero()
         predefined["Green Max"] = GreenMax()
+        predefined["Yellow Max"] = YellowMax()
+        predefined["Purple Max"] = PurpleMax()
     }
-    
-    public func getPredifinedFilterbasedOnName(name: String) -> Filter{
+
+    public func getPredifinedFilterbasedOnName(name: String) -> Filter {
         return predefined[name]!
     }
-    
-    
-    class RedZero: GenericFilter{
-        init(){
+
+    class YellowMax: GenericFilter {
+        init() {
+            super.init(color: Color.YELLOW, value: 255)
+        }
+    }
+
+    class PurpleMax: GenericFilter {
+        init() {
+            super.init(color: Color.PURPLE, value: 255)
+        }
+    }
+
+
+    class RedZero: GenericFilter {
+        init() {
             super.init(color: Color.RED, value: 0)
         }
     }
-    
-    class RedMax: GenericFilter{
-        init(){
+
+    class RedMax: GenericFilter {
+        init() {
             super.init(color: Color.RED, value: 255)
         }
     }
-    
-    class BlueZero: GenericFilter{
-        init(){
+
+    class BlueZero: GenericFilter {
+        init() {
             super.init(color: Color.BLUE, value: 0)
         }
     }
-    
-    class BlueMax: GenericFilter{
-        init(){
+
+    class BlueMax: GenericFilter {
+        init() {
             super.init(color: Color.BLUE, value: 255)
         }
     }
-    
-    class GreenZero: GenericFilter{
-        init(){
+
+    class GreenZero: GenericFilter {
+        init() {
             super.init(color: Color.GREEN, value: 0)
         }
     }
-    
-    class GreenMax: GenericFilter{
-        init(){
+
+    class GreenMax: GenericFilter {
+        init() {
             super.init(color: Color.GREEN, value: 255)
         }
     }
-    
+
 }
