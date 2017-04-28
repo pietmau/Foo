@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b7fe50-4860-41e9-8e90-aeac1376f2df" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" afterPath="$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/ViewController.swift" afterPath="$PROJECT_DIR$/Filterer/ViewController.swift" />
     </list>
@@ -15,21 +16,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6s_Plus_9.3_x86_64_1" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="92" column="47" lean-forward="false" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+            <state relative-caret-position="30">
+              <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Processor.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Filterer/Processor.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/Helper.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="345">
+              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="e#105#122#0" expanded="true" />
               </folding>
@@ -55,8 +66,8 @@
         <option value="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" />
         <option value="$PROJECT_DIR$/Filterer/Processor.swift" />
         <option value="$PROJECT_DIR$/Filterer/PredifinedFilters.swift" />
-        <option value="$PROJECT_DIR$/Filterer/ViewController.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" />
+        <option value="$PROJECT_DIR$/Filterer/ViewController.swift" />
       </list>
     </option>
   </component>
@@ -215,12 +226,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493411984924</updated>
-      <workItem from="1493411988315" duration="5060000" />
+      <workItem from="1493411988315" duration="7227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5060000" />
+    <option name="totallyTimeSpent" value="7227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1427" height="824" extended-state="0" />
@@ -258,26 +269,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>23</line>
+          <line>24</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>35</line>
+          <line>36</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -354,29 +365,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/Helper.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#105#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/Processor.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        <state relative-caret-position="172">
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="92" column="47" lean-forward="false" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+        <state relative-caret-position="30">
+          <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/Helper.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="e#105#122#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

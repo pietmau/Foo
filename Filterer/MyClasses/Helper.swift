@@ -8,7 +8,7 @@ import UIKit
 
 class Helper {
 
-    public static func showSecondaryMenu(view: UIKit.UIView, secondaryMenu: UIView, bottomMenu: UIView) {
+    internal static func showSecondaryMenu(view: UIKit.UIView, secondaryMenu: UIView, bottomMenu: UIView) {
         view.addSubview(secondaryMenu)
         NSLayoutConstraint.activateConstraints(ConstrainMaker(secondaryMenu: secondaryMenu, bottomMenu: bottomMenu, view: view).makeConstraints())
         view.layoutIfNeeded()
@@ -18,7 +18,7 @@ class Helper {
         }
     }
 
-    public static func hideSecondaryMenu(secondaryMenu: UIKit.UIView) {
+    internal static func hideSecondaryMenu(secondaryMenu: UIKit.UIView) {
         UIView.animateWithDuration(0.4, animations: {
             secondaryMenu.alpha = 0
         }) { completed in

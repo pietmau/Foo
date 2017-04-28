@@ -10,35 +10,50 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate {
     var filteredImage: UIImage?
+    var originalImage: UIImage?
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
 
     @IBAction func onGreenSelected(sender: AnyObject) {
-        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Green Max").run()
+        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Green Max").run())
     }
 
     @IBAction func onRedSelected(sender: AnyObject) {
-        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run()
+        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run())
     }
 
     @IBAction func onBlueSelected(sender: AnyObject) {
-        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Blue Max").run()
+        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Blue Max").run())
     }
 
     @IBAction func onYellowSelected(sender: AnyObject) {
-        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Yellow Max").run()
+        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Yellow Max").run())
     }
 
     @IBAction func onPurpleSelected(sender: AnyObject) {
-        imageView.image = Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run()
+        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run())
+    }
+
+    @IBAction func onCompareClicked(sender: UIButton) {
+        if (filteredImage == nil) {
+            return
+        }
+        if (sender.selected) {
+            sender.selected = false
+            showImage(filteredImage!)
+        } else {
+            sender.selected = true
+            showImage(originalImage!)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
+        originalImage = imageView.image
     }
 
     // MARK: Share
@@ -66,7 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
         dismissViewControllerAnimated(true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
+            setOriginalImage(image)
         }
     }
 
@@ -93,5 +108,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         Helper.hideSecondaryMenu(secondaryMenu)
     }
 
+    private func setOriginalImage(image: UIImage) {
+        originalImage = image
+        showImage(originalImage!)
+    }
+
+    func setUiFilteredImage(image: UIImage?) {
+        if let unwrapped = image {
+            filteredImage = unwrapped
+            showImage(filteredImage!)
+        }
+    }
+
+    func showImage(image: UIImage) {
+        imageView.image = image
+
+    }
 }
 
