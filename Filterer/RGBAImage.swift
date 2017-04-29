@@ -69,6 +69,7 @@ public struct RGBAImage {
         
         imageData.destroy()
         imageData.dealloc(width * height)
+        
     }
     
     public func toUIImage() -> UIImage? {

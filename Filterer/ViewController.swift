@@ -68,16 +68,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     private func colorizeButtons() {
-        var image = UIKit.UIImage(named: "Icon-App-40x40")
+        var image = UIKit.UIImage(named: "scenery")
         redButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Red Max").run(), forState: .Normal)
-        image = UIKit.UIImage(named: "Icon-App-40x40")
         greenButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Green Max").run(), forState: .Normal)
-        image = UIKit.UIImage(named: "Icon-App-40x40")
         blueButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Blue Max").run(), forState: .Normal)
-        image = UIKit.UIImage(named: "Icon-App-40x40")
         yellowButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Yellow Max").run(), forState: .Normal)
-        image = UIKit.UIImage(named: "Icon-App-40x40")
-        var new = Processor(image: image!).applyPredifinedFiltersByName("Purple Max").run()
         purpleButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Purple Max").run(), forState: .Normal)
     }
 
