@@ -77,6 +77,9 @@
                                     <constraint firstAttribute="trailing" secondItem="mAB-Ff-DGi" secondAttribute="trailing" id="ZVH-ld-wzx"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-O6-fCb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,15 +87,36 @@
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AH5-w4-n1a"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="aND-Em-4Dd" secondAttribute="bottom" id="GY2-gV-4Y4"/>
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hr8-fN-WFn"/>
+                            <constraint firstAttribute="trailing" secondItem="FRd-O6-fCb" secondAttribute="trailing" id="MOr-fc-B9G"/>
+                            <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="bottom" id="RBb-Er-ITG"/>
                             <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" id="VAw-Rk-Dte"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezb-a7-a7E"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNF-wb-wwY" secondAttribute="bottom" id="gS7-Xm-JhX"/>
+                            <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gdI-Z4-qca"/>
+                            <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vWB-5A-ml3"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MOr-fc-B9G"/>
+                                <exclude reference="gdI-Z4-qca"/>
+                                <exclude reference="vWB-5A-ml3"/>
+                                <exclude reference="RBb-Er-ITG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="MOr-fc-B9G"/>
+                                <include reference="gdI-Z4-qca"/>
+                                <include reference="vWB-5A-ml3"/>
+                                <include reference="RBb-Er-ITG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
                         <outlet property="filterButton" destination="C6B-1F-j0K" id="6Kf-1q-zun"/>
-                        <outlet property="imageView" destination="aND-Em-4Dd" id="vbi-rB-DhQ"/>
+                        <outlet property="filteredImageView" destination="FRd-O6-fCb" id="jKk-7x-3wl"/>
+                        <outlet property="originalImageView" destination="aND-Em-4Dd" id="CGJ-xY-j6A"/>
                         <outlet property="secondaryMenu" destination="ePS-oG-ZHP" id="Be7-JW-Iwe"/>
                     </connections>
                 </viewController>
@@ -151,10 +175,11 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="388" y="329"/>
+            <point key="canvasLocation" x="387" y="328.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="dog" width="720" height="720"/>
         <image name="scenery" width="100" height="134"/>
     </resources>
 </document>

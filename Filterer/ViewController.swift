@@ -9,56 +9,49 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate {
-    var filteredImage: UIImage?
-    var originalImage: UIImage?
-    @IBOutlet var imageView: UIImageView!
+    var imagePresenter: ImagePresenter?
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
 
+    @IBOutlet var originalImageView: UIImageView!
+    @IBOutlet var filteredImageView: UIImageView!
+
     @IBAction func onGreenSelected(sender: AnyObject) {
-        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Green Max").run())
+        imagePresenter!.onGreenSelected()
     }
 
     @IBAction func onRedSelected(sender: AnyObject) {
-        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run())
+        imagePresenter!.onRedSelected()
     }
 
     @IBAction func onBlueSelected(sender: AnyObject) {
-        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Blue Max").run())
+        imagePresenter!.onBlueSelected()
     }
 
     @IBAction func onYellowSelected(sender: AnyObject) {
-        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Yellow Max").run())
+        imagePresenter!.onYellowSelected()
     }
 
     @IBAction func onPurpleSelected(sender: AnyObject) {
-        setUiFilteredImage(Processor(image: imageView.image!).applyPredifinedFiltersByName("Red Max").run())
+        imagePresenter!.onPurpleSelected()
     }
 
     @IBAction func onCompareClicked(sender: UIButton) {
-        if (filteredImage == nil) {
-            return
-        }
-        if (sender.selected) {
-            sender.selected = false
-            showImage(filteredImage!)
-        } else {
-            sender.selected = true
-            showImage(originalImage!)
-        }
+        imagePresenter!.onCompareClicked(sender)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
-        originalImage = imageView.image
+        imagePresenter = ImagePresenter(originalImageView: originalImageView, filteredImageView: filteredImageView)
+        imagePresenter!.setOriginalImage(originalImageView.image!)
     }
 
     // MARK: Share
     @IBAction func onShare(sender: AnyObject) {
-        let activityController = UIActivityViewController(activityItems: ["Check out our really cool app", imageView.image!], applicationActivities: nil)
+        let activityController = UIActivityViewController(activityItems: ["Check out our really cool app", originalImageView.image!], applicationActivities: nil)
         presentViewController(activityController, animated: true, completion: nil)
     }
 
@@ -67,7 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(ActionSheetWrapper(delegate: self).getSheet(), animated: true, completion: nil)
     }
 
-    func showCamera() {
+    func showCamera() {// TODO check if on emulator
         let cameraPicker = CameraPicker(delegate: self)
         presentViewController(cameraPicker, animated: true, completion: nil)
     }
@@ -81,7 +74,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
         dismissViewControllerAnimated(true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            setOriginalImage(image)
+            imagePresenter!.onImagePicked(image)
         }
     }
 
@@ -108,21 +101,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         Helper.hideSecondaryMenu(secondaryMenu)
     }
 
-    private func setOriginalImage(image: UIImage) {
-        originalImage = image
-        showImage(originalImage!)
-    }
-
-    func setUiFilteredImage(image: UIImage?) {
-        if let unwrapped = image {
-            filteredImage = unwrapped
-            showImage(filteredImage!)
-        }
-    }
-
-    func showImage(image: UIImage) {
-        imageView.image = image
-
-    }
 }
 
