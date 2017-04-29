@@ -45,7 +45,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
-        imagePresenter = ImagePresenter(originalImageView: originalImageView, filteredImageView: filteredImageView)
+        filteredImageView.translatesAutoresizingMaskIntoConstraints = false
+        imagePresenter = ImagePresenter(mainView: view, originalImageView: originalImageView, filteredImageView: filteredImageView, secondaryMenu: secondaryMenu)
         imagePresenter!.setOriginalImage(originalImageView.image!)
     }
 

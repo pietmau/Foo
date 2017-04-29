@@ -9,14 +9,17 @@ import UIKit
 class ImagePresenter {
     var originalImageView: UIKit.UIImageView
     var filteredImageView: UIKit.UIImageView
+    var mainView: UIKit.UIView
 
     var originalImage: UIKit.UIImage?
     var filteredImage: UIKit.UIImage?
+    private var secondaryMenu: UIKit.UIView
 
-    internal init(originalImageView: UIKit.UIImageView, filteredImageView: UIKit.UIImageView) {
+    internal init(mainView: UIKit.UIView, originalImageView: UIKit.UIImageView, filteredImageView: UIKit.UIImageView, secondaryMenu: UIKit.UIView) {
         self.originalImageView = originalImageView
         self.filteredImageView = filteredImageView
-        self.filteredImageView.hidden = true
+        self.mainView = mainView
+        self.secondaryMenu = secondaryMenu
     }
 
     internal func setOriginalImage(originalImage: UIKit.UIImage) {
@@ -73,7 +76,18 @@ class ImagePresenter {
         showFilteredImageView(true)
     }
 
-    private func showFilteredImageView(hidden: Bool) {
-        filteredImageView.hidden = !hidden
+    private func showFilteredImageView(show: Bool) {
+        if (show) {
+            mainView.addSubview(filteredImageView)
+            let topConstraint = filteredImageView.topAnchor.constraintEqualToAnchor(originalImageView.topAnchor)
+            let bottomConstraint = filteredImageView.bottomAnchor.constraintEqualToAnchor(originalImageView.bottomAnchor)
+            let leftConstraint = filteredImageView.leftAnchor.constraintEqualToAnchor(originalImageView.leftAnchor)
+            let rightConstraint = filteredImageView.rightAnchor.constraintEqualToAnchor(originalImageView.rightAnchor)
+            NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, topConstraint])
+            mainView.layoutIfNeeded()
+            mainView.bringSubviewToFront(secondaryMenu)
+        } else {
+            filteredImageView.removeFromSuperview()
+        }
     }
 }

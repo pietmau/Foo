@@ -10,7 +10,11 @@ class Helper {
 
     internal static func showSecondaryMenu(view: UIKit.UIView, secondaryMenu: UIView, bottomMenu: UIView) {
         view.addSubview(secondaryMenu)
-        NSLayoutConstraint.activateConstraints(ConstrainMaker(secondaryMenu: secondaryMenu, bottomMenu: bottomMenu, view: view).makeConstraints())
+        let bottomConstraint = secondaryMenu.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
+        let leftConstraint = secondaryMenu.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
+        let rightConstraint = secondaryMenu.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
+        let heightConstraint = secondaryMenu.heightAnchor.constraintEqualToConstant(44)
+        NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
         view.layoutIfNeeded()
         secondaryMenu.alpha = 0
         UIView.animateWithDuration(0.4) {
