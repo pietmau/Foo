@@ -78,4 +78,14 @@ class ImagePresenter {
         }
     }
 
+    func onCompareClickUp(sender: UIButton) {
+        sender.selected = false
+        view.showFilteredImageView(true)
+    }
+
+    func onCompareClickDown(sender: UIButton) {
+        sender.selected = true
+        view.showFilteredImageView(false)
+    }
+
 }

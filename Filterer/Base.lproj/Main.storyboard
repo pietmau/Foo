@@ -53,7 +53,8 @@
                                                 </constraints>
                                                 <state key="normal" title="Compare"/>
                                                 <connections>
-                                                    <action selector="onCompareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Kb-ib-f2W"/>
+                                                    <action selector="onCompareClickDown:" destination="BYZ-38-t0r" eventType="touchDown" id="CbY-OZ-f12"/>
+                                                    <action selector="onCompareClickUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1r-3z-Bh3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-ry-Zqw">
@@ -91,7 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
-                        <outlet property="compareButton" destination="tPg-2N-f93" id="tun-AQ-OCD"/>
+                        <outlet property="compareButton" destination="tPg-2N-f93" id="Lmt-4i-buV"/>
                         <outlet property="filterButton" destination="C6B-1F-j0K" id="6Kf-1q-zun"/>
                         <outlet property="filteredImageView" destination="FRd-O6-fCb" id="jKk-7x-3wl"/>
                         <outlet property="originalImageView" destination="aND-Em-4Dd" id="CGJ-xY-j6A"/>

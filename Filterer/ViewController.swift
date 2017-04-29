@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
+    @IBOutlet var compareButton: UIButton!
 
     @IBOutlet var originalImageView: UIImageView!
     @IBOutlet var filteredImageView: UIImageView!
@@ -33,15 +34,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePresenter!.onYellowSelected()
     }
 
-    @IBAction func onPurpleSelected(sender: AnyObject) {
+    @IBAction func onPurpleSelected(sender: UIButton) {
         imagePresenter!.onPurpleSelected()
     }
 
-    @IBAction func onCompareClicked(sender: UIButton) {
-        imagePresenter!.onCompareClicked(sender)
+    @IBAction func onCompareClickUp(sender: UIButton) {
+        imagePresenter.onCompareClickUp(sender)
+    }
+ 
+    @IBAction func onCompareClickDown(sender: UIButton) {
+        imagePresenter.onCompareClickDown(sender)
     }
 
-    @IBOutlet var compareButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
@@ -121,7 +125,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
-    func showFilteredImageView(show: Bool){
+    func showFilteredImageView(show: Bool) {
         if (show) {
             view.addSubview(filteredImageView)
             let topConstraint = filteredImageView.topAnchor.constraintEqualToAnchor(originalImageView.topAnchor)
@@ -136,11 +140,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
-    func setCompareButtonSelected(selected: Bool){
+    func setCompareButtonSelected(selected: Bool) {
         compareButton!.selected = selected
     }
 
-    func setCompareButtonEnabled(enabled: Bool){
+    func setCompareButtonEnabled(enabled: Bool) {
         compareButton!.enabled = enabled
     }
 }
