@@ -54,11 +54,10 @@ class ImagePresenter {
 
     internal func onGreenSelected() {
         setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Green Max").run())
-
     }
 
     internal func onPurpleSelected() {
-        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Red Max").run())
+        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Purple Max").run())
     }
 
     private func setAndShowUiFilteredImage(image: UIImage?) {

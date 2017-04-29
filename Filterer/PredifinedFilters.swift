@@ -38,7 +38,6 @@ public struct PredifinedFilters {
         }
     }
 
-
     class RedZero: GenericFilter {
         init() {
             super.init(color: Color.RED, value: 0)
