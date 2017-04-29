@@ -43,8 +43,8 @@ public class GenericFilter: Filter {
         return pixel
     }
 
-    public func setIntensity(intensity: Float) -> Filter{
-        value = Int(Float(value) * intensity)
+    public func setIntensity(intensity: Float) -> Filter {
+        value = Int(Float(value) * intensity * 2)
         return self
     }
 }

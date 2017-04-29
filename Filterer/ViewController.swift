@@ -215,5 +215,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+
+    public func resetSlider() {
+        slider.value = 0.5
+    }
 }
 

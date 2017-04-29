@@ -28,13 +28,13 @@ public struct PredifinedFilters {
 
     class YellowMax: GenericFilter {
         init() {
-            super.init(color: Color.YELLOW, value: 255)
+            super.init(color: Color.YELLOW, value: 127)
         }
     }
 
     class PurpleMax: GenericFilter {
         init() {
-            super.init(color: Color.PURPLE, value: 255)
+            super.init(color: Color.PURPLE, value: 127)
         }
     }
 
@@ -46,7 +46,7 @@ public struct PredifinedFilters {
 
     class RedMax: GenericFilter {
         init() {
-            super.init(color: Color.RED, value: 255)
+            super.init(color: Color.RED, value: 127)
         }
     }
 
@@ -58,7 +58,7 @@ public struct PredifinedFilters {
 
     class BlueMax: GenericFilter {
         init() {
-            super.init(color: Color.BLUE, value: 255)
+            super.init(color: Color.BLUE, value: 127)
         }
     }
 
@@ -70,7 +70,7 @@ public struct PredifinedFilters {
 
     class GreenMax: GenericFilter {
         init() {
-            super.init(color: Color.GREEN, value: 255)
+            super.init(color: Color.GREEN, value: 127)
         }
     }
 

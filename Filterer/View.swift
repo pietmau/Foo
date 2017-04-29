@@ -24,4 +24,6 @@ protocol  View {
     func setEditButtonEnabled(enabled: Bool)
 
     func showSlider(show: Bool)
+
+    func resetSlider()
 }
