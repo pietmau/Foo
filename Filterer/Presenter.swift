@@ -7,6 +7,7 @@ import Foundation
 import UIKit
 
 class ImagePresenter {
+
     var originalImageView: UIKit.UIImageView
     var filteredImageView: UIKit.UIImageView
     var mainView: UIKit.UIView
@@ -42,12 +43,11 @@ class ImagePresenter {
         }
         if (button.selected) {
             button.selected = false
-            //showImage(filteredImage!)
+            showFilteredImageView(true)
         } else {
             button.selected = true
-            //button(originalImage!)
+            showFilteredImageView(false)
         }
-
     }
 
     internal func onRedSelected() {
