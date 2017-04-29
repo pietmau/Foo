@@ -9,4 +9,6 @@
 
 public protocol Filter {
     func apply(image:RGBAImage) -> RGBAImage
+
+    func setIntensity(intensity:Float) -> Filter
 }

@@ -7,9 +7,10 @@ import Foundation
 import UIKit
 
 class ImagePresenter {
-    var originalImage: UIKit.UIImage?
-    var filteredImage: UIKit.UIImage?
-    let view: View
+    private var originalImage: UIKit.UIImage?
+    private var filteredImage: UIKit.UIImage?
+    private let view: View
+    private var currentFilter: Filter?
 
     internal init(view: View, originalImage: UIKit.UIImage) {
         self.view = view
@@ -41,23 +42,28 @@ class ImagePresenter {
     }
 
     internal func onRedSelected() {
-        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Red Max").run())
+        currentFilter = PredifinedFilters().getPredifinedFilterbasedOnName("Red Max")
+        setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
 
     internal func onBlueSelected() {
-        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Blue Max").run())
+        currentFilter = PredifinedFilters().getPredifinedFilterbasedOnName("Blue Max")
+        setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
 
     internal func onYellowSelected() {
-        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Yellow Max").run())
+        currentFilter = PredifinedFilters().getPredifinedFilterbasedOnName("Yellow Max")
+        setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
 
     internal func onGreenSelected() {
-        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Green Max").run())
+        currentFilter = PredifinedFilters().getPredifinedFilterbasedOnName("Green Max")
+        setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
 
     internal func onPurpleSelected() {
-        setAndShowUiFilteredImage(Processor(image: originalImage!).applyPredifinedFiltersByName("Purple Max").run())
+        currentFilter = PredifinedFilters().getPredifinedFilterbasedOnName("Purple Max")
+        setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
 
     private func setAndShowUiFilteredImage(image: UIImage?) {
@@ -89,14 +95,17 @@ class ImagePresenter {
     }
 
     func onEditClicked(sender: UIButton) {
-        if(sender.selected){
+        if (sender.selected) {
             sender.selected = false
             view.showSlider(false)
-        }
-        else {
+        } else {
             sender.selected = true
             view.showSlider(true)
         }
+    }
+
+    func onSliderMove(value: Float) {
+        setFilteredImage(currentFilter!.setIntensity(value).apply(RGBAImage(image: originalImage!)!).toUIImage()!)
     }
 
 

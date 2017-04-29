@@ -22,5 +22,10 @@ public class SimpleRedFilter: Filter {
         }
         return ff
     }
+
+    public func setIntensity(intensity: Float)-> Filter{
+        // TODO throw exception here
+        return self
+    }
 }
 

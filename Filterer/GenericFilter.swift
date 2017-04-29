@@ -8,7 +8,7 @@
 
 public class GenericFilter: Filter {
     private let color: Color
-    private let value: Int
+    private var value: Int
 
     public init(color: Color, value: Int) {
         self.color = color
@@ -41,6 +41,10 @@ public class GenericFilter: Filter {
             pixel.blue = UInt8(value)
         }
         return pixel
+    }
 
+    public func setIntensity(intensity: Float) -> Filter{
+        value = Int(Float(value) * intensity)
+        return self
     }
 }

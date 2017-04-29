@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var label: UILabel!
 
     @IBAction func onSliderMove(sender: UISlider) {
-        print(sender.value)
+        imagePresenter.onSliderMove(sender.value)
     }
 
     @IBAction func onEditClicked(sender: UIButton) {
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     private func colorizeButtons() {
-        var image = UIKit.UIImage(named: "scenery")
+        let image = UIKit.UIImage(named: "scenery")
         redButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Red Max").run(), forState: .Normal)
         greenButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Green Max").run(), forState: .Normal)
         blueButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Blue Max").run(), forState: .Normal)
