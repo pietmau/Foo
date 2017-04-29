@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate {
-    var imagePresenter: ImagePresenter?
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
+    var imagePresenter: ImagePresenter!
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
@@ -46,8 +46,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
-        imagePresenter = ImagePresenter(mainView: view, originalImageView: originalImageView, filteredImageView: filteredImageView, secondaryMenu: secondaryMenu)
+        imagePresenter = ImagePresenter(view: self)
         imagePresenter!.setOriginalImage(originalImageView.image!)
+    }
+
+    func setOriginalImage(image: UIKit.UIImage) {
+        originalImageView.image = image
+    }
+
+    func setFilteredImage(image: UIImage) {
+        filteredImageView.image = image
     }
 
     // MARK: Share
@@ -85,21 +93,46 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // MARK: Filter Menu
     @IBAction func onFilter(sender: UIButton) {
-        if (sender.selected) {
-            hideSecondaryMenu()
-            sender.selected = false
-        } else {
-            showSecondaryMenu()
-            sender.selected = true
-        }
+        imagePresenter.onFilter(sender)
     }
 
     func showSecondaryMenu() {
-        Helper.showSecondaryMenu(view, secondaryMenu: secondaryMenu, bottomMenu: bottomMenu)
+        view.addSubview(secondaryMenu)
+        let bottomConstraint = secondaryMenu.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
+        let leftConstraint = secondaryMenu.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
+        let rightConstraint = secondaryMenu.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
+        let heightConstraint = secondaryMenu.heightAnchor.constraintEqualToConstant(44)
+        NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
+        view.layoutIfNeeded()
+        secondaryMenu.alpha = 0
+        UIView.animateWithDuration(0.4) {
+            self.secondaryMenu.alpha = 1.0
+        }
     }
 
     func hideSecondaryMenu() {
-        Helper.hideSecondaryMenu(secondaryMenu)
+        UIView.animateWithDuration(0.4, animations: {
+            self.secondaryMenu.alpha = 0
+        }) { completed in
+            if completed == true {
+                self.secondaryMenu.removeFromSuperview()
+            }
+        }
+    }
+
+    func showFilteredImageView(show: Bool){
+        if (show) {
+            view.addSubview(filteredImageView)
+            let topConstraint = filteredImageView.topAnchor.constraintEqualToAnchor(originalImageView.topAnchor)
+            let bottomConstraint = filteredImageView.bottomAnchor.constraintEqualToAnchor(originalImageView.bottomAnchor)
+            let leftConstraint = filteredImageView.leftAnchor.constraintEqualToAnchor(originalImageView.leftAnchor)
+            let rightConstraint = filteredImageView.rightAnchor.constraintEqualToAnchor(originalImageView.rightAnchor)
+            NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, topConstraint])
+            view.layoutIfNeeded()
+            view.bringSubviewToFront(secondaryMenu)
+        } else {
+            filteredImageView.removeFromSuperview()
+        }
     }
 
 }
