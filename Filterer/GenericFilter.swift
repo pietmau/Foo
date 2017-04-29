@@ -22,7 +22,6 @@ public class GenericFilter: Filter {
             let component = getColorComponent(&pixel)
             result.pixels[x] = component
         }
-
         return result
     }
 

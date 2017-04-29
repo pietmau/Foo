@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORIGINAL IMAGE" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVC-fv-o7I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORIGINAL" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVC-fv-o7I">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="wzR-pU-Ohr">
@@ -36,8 +36,7 @@
                                         <exclude reference="wzR-pU-Ohr"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="179" y="190" width="42" height="21"/>
+                                <variation key="heightClass=compact-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="wzR-pU-Ohr"/>
                                     </mask>
@@ -116,13 +115,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueButton" destination="sNq-be-bSy" id="B7h-tF-rox"/>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
                         <outlet property="compareButton" destination="tPg-2N-f93" id="Lmt-4i-buV"/>
                         <outlet property="filterButton" destination="C6B-1F-j0K" id="6Kf-1q-zun"/>
                         <outlet property="filteredImageView" destination="FRd-O6-fCb" id="jKk-7x-3wl"/>
+                        <outlet property="greenButton" destination="axt-GK-a6m" id="Bdf-hN-vUU"/>
                         <outlet property="label" destination="HVC-fv-o7I" id="tUu-1Z-rjj"/>
                         <outlet property="originalImageView" destination="aND-Em-4Dd" id="CGJ-xY-j6A"/>
+                        <outlet property="purpleButton" destination="7P8-VM-YCw" id="0yT-IN-djB"/>
+                        <outlet property="redButton" destination="Drk-Kp-614" id="jBV-uo-YuG"/>
                         <outlet property="secondaryMenu" destination="ePS-oG-ZHP" id="Be7-JW-Iwe"/>
+                        <outlet property="yellowButton" destination="zUq-ef-bpc" id="l8h-ub-uoq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,37 +137,32 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n3M-NR-6VP">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-Kp-614">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-Kp-614">
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="128"/>
-                                    <state key="normal" title="Red"/>
                                     <connections>
                                         <action selector="onRedSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGA-XN-DX8"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axt-GK-a6m">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axt-GK-a6m">
                                     <rect key="frame" x="48" y="0.0" width="48" height="128"/>
-                                    <state key="normal" title="Green"/>
                                     <connections>
                                         <action selector="onGreenSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz1-yD-xul"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-be-bSy">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-be-bSy">
                                     <rect key="frame" x="96" y="0.0" width="48" height="128"/>
-                                    <state key="normal" title="Blue"/>
                                     <connections>
                                         <action selector="onBlueSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbb-4d-ckh"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUq-ef-bpc">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUq-ef-bpc">
                                     <rect key="frame" x="144" y="0.0" width="48" height="128"/>
-                                    <state key="normal" title="Yellow"/>
                                     <connections>
                                         <action selector="onYellowSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xl6-MJ-J3B"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-VM-YCw">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-VM-YCw">
                                     <rect key="frame" x="192" y="0.0" width="48" height="128"/>
-                                    <state key="normal" title="Purple"/>
                                     <connections>
                                         <action selector="onPurpleSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUD-1Y-TvG"/>
                                     </connections>

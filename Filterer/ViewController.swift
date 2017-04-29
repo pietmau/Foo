@@ -15,6 +15,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var filterButton: UIButton!
     @IBOutlet var compareButton: UIButton!
 
+    @IBOutlet var redButton: UIButton!
+    @IBOutlet var greenButton: UIButton!
+    @IBOutlet var blueButton: UIButton!
+    @IBOutlet var yellowButton: UIButton!
+    @IBOutlet var purpleButton: UIButton!
+
     @IBOutlet var originalImageView: UIImageView!
     @IBOutlet var filteredImageView: UIImageView!
 
@@ -54,10 +60,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
+        colorizeButtons()
     }
 
     func setOriginalImage(image: UIKit.UIImage) {
         originalImageView.image = image
+    }
+
+    private func colorizeButtons() {
+        var image = UIKit.UIImage(named: "Icon-App-40x40")
+        redButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Red Max").run(), forState: .Normal)
+        image = UIKit.UIImage(named: "Icon-App-40x40")
+        greenButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Green Max").run(), forState: .Normal)
+        image = UIKit.UIImage(named: "Icon-App-40x40")
+        blueButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Blue Max").run(), forState: .Normal)
+        image = UIKit.UIImage(named: "Icon-App-40x40")
+        yellowButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Yellow Max").run(), forState: .Normal)
+        image = UIKit.UIImage(named: "Icon-App-40x40")
+        var new = Processor(image: image!).applyPredifinedFiltersByName("Purple Max").run()
+        purpleButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Purple Max").run(), forState: .Normal)
     }
 
     func setFilteredImage(image: UIImage) {
@@ -127,7 +148,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showFilteredImageView(show: Bool) {
-        if (show) {
+        if (show) { //TODO use autolyout
             view.addSubview(filteredImageView)
             let topConstraint = filteredImageView.topAnchor.constraintEqualToAnchor(originalImageView.topAnchor)
             let bottomConstraint = filteredImageView.bottomAnchor.constraintEqualToAnchor(originalImageView.bottomAnchor)
