@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var originalImageView: UIImageView!
     @IBOutlet var filteredImageView: UIImageView!
 
+    @IBOutlet var label: UILabel!
+    
     @IBAction func onGreenSelected(sender: AnyObject) {
         imagePresenter!.onGreenSelected()
     }
@@ -53,6 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self)
         imagePresenter!.setOriginalImage(originalImageView.image!)
+
     }
 
     func setOriginalImage(image: UIKit.UIImage) {
