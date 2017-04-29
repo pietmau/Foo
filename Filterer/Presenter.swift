@@ -85,6 +85,8 @@ class ImagePresenter {
             sender.selected = false
         } else {
             view.showSecondaryMenu()
+            view.setEditButtonSelected(false)
+            view.showSlider(false)
             sender.selected = true
         }
     }
@@ -105,6 +107,8 @@ class ImagePresenter {
             view.showSlider(false)
         } else {
             sender.selected = true
+            view.setFilterButtonSelected(false)
+            view.hideSecondaryMenu()
             view.showSlider(true)
         }
     }

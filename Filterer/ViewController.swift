@@ -212,5 +212,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     public func resetSlider() {
         slider.value = 0.5
     }
+
+    func setEditButtonSelected(selected: Bool){
+        editButton.selected = selected
+    }
+
+    func setFilterButtonSelected(selected: Bool){
+        filterButton.selected = selected
+    }
 }
 

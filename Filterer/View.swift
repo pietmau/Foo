@@ -26,4 +26,8 @@ protocol  View {
     func showSlider(show: Bool)
 
     func resetSlider()
+
+    func setEditButtonSelected(selected: Bool)
+
+    func setFilterButtonSelected(selected: Bool)
 }
