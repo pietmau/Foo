@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
     @IBOutlet var compareButton: UIButton!
+    @IBOutlet var editButton: UIButton!
 
     @IBOutlet var redButton: UIButton!
     @IBOutlet var greenButton: UIButton!
@@ -25,6 +26,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var filteredImageView: UIImageView!
 
     @IBOutlet var label: UILabel!
+
+    @IBAction func onEditClicked(sender: AnyObject) {
+    }
 
     @IBAction func onGreenSelected(sender: AnyObject) {
         imagePresenter!.onGreenSelected()
@@ -173,6 +177,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func setCompareButtonEnabled(enabled: Bool) {
         compareButton!.enabled = enabled
+    }
+
+    func setEditButtonEnabled(enabled: Bool) {
+        editButton.enabled = enabled
     }
 }
 

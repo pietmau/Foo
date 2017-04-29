@@ -14,7 +14,6 @@ class ImagePresenter {
     internal init(view: View, originalImage: UIKit.UIImage) {
         self.view = view
         setOriginalImage(originalImage)
-        view.setCompareButtonEnabled(false)
     }
 
     internal func setOriginalImage(originalImage: UIKit.UIImage) {
@@ -65,6 +64,7 @@ class ImagePresenter {
         setFilteredImage(image!)
         view.showFilteredImageView(true)
         view.setCompareButtonEnabled(true)
+        view.setEditButtonEnabled(true)
         view.setCompareButtonSelected(false)
     }
 

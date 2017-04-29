@@ -20,4 +20,6 @@ protocol  View {
     func setCompareButtonSelected(selected: Bool)
 
     func setCompareButtonEnabled(enabled: Bool)
+
+    func setEditButtonEnabled(enabled: Bool)
 }
