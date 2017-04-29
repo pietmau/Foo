@@ -65,6 +65,7 @@ class ImagePresenter {
         setFilteredImage(image!)
         view.showFilteredImageView(true)
         view.setCompareButtonEnabled(true)
+        view.setCompareButtonSelected(false)
     }
 
     func onFilter(sender: UIButton) {
