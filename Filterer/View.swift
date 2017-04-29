@@ -22,4 +22,6 @@ protocol  View {
     func setCompareButtonEnabled(enabled: Bool)
 
     func setEditButtonEnabled(enabled: Bool)
+
+    func showSlider(show: Bool)
 }

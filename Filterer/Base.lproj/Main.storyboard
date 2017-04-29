@@ -134,6 +134,7 @@
                         <outlet property="purpleButton" destination="7P8-VM-YCw" id="0yT-IN-djB"/>
                         <outlet property="redButton" destination="Drk-Kp-614" id="jBV-uo-YuG"/>
                         <outlet property="secondaryMenu" destination="ePS-oG-ZHP" id="Be7-JW-Iwe"/>
+                        <outlet property="slider" destination="2bz-vO-2Oe" id="tY2-eV-cIL"/>
                         <outlet property="yellowButton" destination="zUq-ef-bpc" id="l8h-ub-uoq"/>
                     </connections>
                 </viewController>
@@ -191,6 +192,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="2bz-vO-2Oe">
+                    <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="onSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="lct-Gd-G3l"/>
+                    </connections>
+                </slider>
             </objects>
             <point key="canvasLocation" x="387" y="328.5"/>
         </scene>

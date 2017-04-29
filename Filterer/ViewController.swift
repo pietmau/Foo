@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var filterButton: UIButton!
     @IBOutlet var compareButton: UIButton!
     @IBOutlet var editButton: UIButton!
+    @IBOutlet var slider: UISlider!
 
     @IBOutlet var redButton: UIButton!
     @IBOutlet var greenButton: UIButton!
@@ -27,7 +28,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet var label: UILabel!
 
-    @IBAction func onEditClicked(sender: AnyObject) {
+    @IBAction func onSliderMove(sender: UISlider) {
+        print(sender.value)
+    }
+
+    @IBAction func onEditClicked(sender: UIButton) {
+        imagePresenter.onEditClicked(sender)
     }
 
     @IBAction func onGreenSelected(sender: AnyObject) {
@@ -63,6 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
+        slider.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         colorizeButtons()
     }
@@ -86,7 +93,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // MARK: Share
     @IBAction func onShare(sender: AnyObject) {
-        let activityController = UIActivityViewController(activityItems: ["Check out our really cool app", originalImageView.image!], applicationActivities: nil)
+        let activityController =
+                UIActivityViewController(activityItems:
+                ["Check out our really cool app", originalImageView.image!], applicationActivities: nil)
         presentViewController(activityController, animated: true, completion: nil)
     }
 
@@ -181,6 +190,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func setEditButtonEnabled(enabled: Bool) {
         editButton.enabled = enabled
+    }
+
+    func showSlider(show: Bool) {
+        if (show) {
+            view.addSubview(slider)
+            let bottomConstraint = slider.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
+            let leftConstraint = slider.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
+            let rightConstraint = slider.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
+            let heightConstraint = slider.heightAnchor.constraintEqualToConstant(44)
+            NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
+            view.layoutIfNeeded()
+            slider.alpha = 0
+            UIView.animateWithDuration(0.4) {
+                self.slider.alpha = 1.0
+            }
+        } else {
+            UIView.animateWithDuration(0.4, animations: {
+                self.slider.alpha = 0
+            }) { completed in
+                if completed == true {
+                    self.slider.removeFromSuperview()
+                }
+            }
+        }
     }
 }
 

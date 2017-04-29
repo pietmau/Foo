@@ -88,4 +88,16 @@ class ImagePresenter {
         view.showFilteredImageView(false)
     }
 
+    func onEditClicked(sender: UIButton) {
+        if(sender.selected){
+            sender.selected = false
+            view.showSlider(false)
+        }
+        else {
+            sender.selected = true
+            view.showSlider(true)
+        }
+    }
+
+
 }
