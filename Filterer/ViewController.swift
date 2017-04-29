@@ -157,14 +157,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func showFilteredImageView(show: Bool) {
         if (show) { //TODO use autolyout
-            view.addSubview(filteredImageView)
-            let topConstraint = filteredImageView.topAnchor.constraintEqualToAnchor(originalImageView.topAnchor)
-            let bottomConstraint = filteredImageView.bottomAnchor.constraintEqualToAnchor(originalImageView.bottomAnchor)
-            let leftConstraint = filteredImageView.leftAnchor.constraintEqualToAnchor(originalImageView.leftAnchor)
-            let rightConstraint = filteredImageView.rightAnchor.constraintEqualToAnchor(originalImageView.rightAnchor)
-            NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, topConstraint])
-            view.layoutIfNeeded()
-            view.bringSubviewToFront(secondaryMenu)
+            filteredImageView.hidden = false
             filteredImageView.alpha = 0
             UIView.animateWithDuration(0.4) {
                 self.filteredImageView.alpha = 1.0
@@ -174,7 +167,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.filteredImageView.alpha = 0
             }) { completed in
                 if completed == true {
-                    self.filteredImageView.removeFromSuperview()
+                    self.filteredImageView.hidden = true
                 }
             }
         }
