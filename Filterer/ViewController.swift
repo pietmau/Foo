@@ -41,6 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePresenter!.onCompareClicked(sender)
     }
 
+    @IBOutlet var compareButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
@@ -135,5 +136,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
+    func setCompareButtonSelected(selected: Bool){
+        compareButton!.selected = selected
+    }
+
+    func setCompareButtonEnabled(enabled: Bool){
+        compareButton!.enabled = enabled
+    }
 }
 

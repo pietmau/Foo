@@ -17,5 +17,7 @@ protocol  View {
 
     func showSecondaryMenu()
 
+    func setCompareButtonSelected(selected: Bool)
 
+    func setCompareButtonEnabled(enabled: Bool)
 }

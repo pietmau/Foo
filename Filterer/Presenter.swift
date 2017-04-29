@@ -13,6 +13,7 @@ class ImagePresenter {
 
     internal init(view: View) {
         self.view = view
+        view.setCompareButtonEnabled(false)
     }
 
     internal func setOriginalImage(originalImage: UIKit.UIImage) {
@@ -30,14 +31,11 @@ class ImagePresenter {
     }
 
     internal func onCompareClicked(button: UIButton) {
-        if (filteredImage == nil) {
-            return
-        }
         if (button.selected) {
-            button.selected = false
+            view.setCompareButtonSelected(false)
             view.showFilteredImageView(true)
         } else {
-            button.selected = true
+            view.setCompareButtonSelected(true)
             view.showFilteredImageView(false)
         }
     }
@@ -66,6 +64,7 @@ class ImagePresenter {
     private func setAndShowUiFilteredImage(image: UIImage?) {
         setFilteredImage(image!)
         view.showFilteredImageView(true)
+        view.setCompareButtonEnabled(true)
     }
 
     func onFilter(sender: UIButton) {
