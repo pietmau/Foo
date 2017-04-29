@@ -11,8 +11,9 @@ class ImagePresenter {
     var filteredImage: UIKit.UIImage?
     let view: View
 
-    internal init(view: View) {
+    internal init(view: View, originalImage: UIKit.UIImage) {
         self.view = view
+        setOriginalImage(originalImage)
         view.setCompareButtonEnabled(false)
     }
 

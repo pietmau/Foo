@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var filteredImageView: UIImageView!
 
     @IBOutlet var label: UILabel!
-    
+
     @IBAction func onGreenSelected(sender: AnyObject) {
         imagePresenter!.onGreenSelected()
     }
@@ -43,7 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func onCompareClickUp(sender: UIButton) {
         imagePresenter.onCompareClickUp(sender)
     }
- 
+
     @IBAction func onCompareClickDown(sender: UIButton) {
         imagePresenter.onCompareClickDown(sender)
     }
@@ -53,9 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
-        imagePresenter = ImagePresenter(view: self)
-        imagePresenter!.setOriginalImage(originalImageView.image!)
-
+        imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
     }
 
     func setOriginalImage(image: UIKit.UIImage) {
@@ -138,8 +136,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, topConstraint])
             view.layoutIfNeeded()
             view.bringSubviewToFront(secondaryMenu)
+            filteredImageView.alpha = 0
+            UIView.animateWithDuration(0.4) {
+                self.filteredImageView.alpha = 1.0
+            }
         } else {
-            filteredImageView.removeFromSuperview()
+            UIView.animateWithDuration(0.4, animations: {
+                self.filteredImageView.alpha = 0
+            }) { completed in
+                if completed == true {
+                    self.filteredImageView.removeFromSuperview()
+                }
+            }
         }
     }
 
