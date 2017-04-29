@@ -77,8 +77,9 @@
                                     <constraint firstAttribute="trailing" secondItem="mAB-Ff-DGi" secondAttribute="trailing" id="ZVH-ld-wzx"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-O6-fCb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-O6-fCb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -89,26 +90,38 @@
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hr8-fN-WFn"/>
                             <constraint firstAttribute="trailing" secondItem="FRd-O6-fCb" secondAttribute="trailing" id="MOr-fc-B9G"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="bottom" id="RBb-Er-ITG"/>
+                            <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TRe-L8-VBK"/>
                             <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" id="VAw-Rk-Dte"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezb-a7-a7E"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNF-wb-wwY" secondAttribute="bottom" id="gS7-Xm-JhX"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gdI-Z4-qca"/>
+                            <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="bottom" id="jat-mx-75Z"/>
+                            <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="r5c-X7-ooP"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vWB-5A-ml3"/>
+                            <constraint firstAttribute="trailing" secondItem="FRd-O6-fCb" secondAttribute="trailing" id="yav-MM-Bpx"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MOr-fc-B9G"/>
+                                <exclude reference="TRe-L8-VBK"/>
                                 <exclude reference="gdI-Z4-qca"/>
+                                <exclude reference="r5c-X7-ooP"/>
                                 <exclude reference="vWB-5A-ml3"/>
+                                <exclude reference="yav-MM-Bpx"/>
                                 <exclude reference="RBb-Er-ITG"/>
+                                <exclude reference="jat-mx-75Z"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="MOr-fc-B9G"/>
+                                <include reference="TRe-L8-VBK"/>
                                 <include reference="gdI-Z4-qca"/>
+                                <include reference="r5c-X7-ooP"/>
                                 <include reference="vWB-5A-ml3"/>
+                                <include reference="yav-MM-Bpx"/>
                                 <include reference="RBb-Er-ITG"/>
+                                <include reference="jat-mx-75Z"/>
                             </mask>
                         </variation>
                     </view>

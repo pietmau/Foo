@@ -16,7 +16,7 @@ class ImagePresenter {
     internal init(originalImageView: UIKit.UIImageView, filteredImageView: UIKit.UIImageView) {
         self.originalImageView = originalImageView
         self.filteredImageView = filteredImageView
-        //self.filteredImageView.hidden = true
+        self.filteredImageView.hidden = true
     }
 
     internal func setOriginalImage(originalImage: UIKit.UIImage) {
@@ -74,6 +74,6 @@ class ImagePresenter {
     }
 
     private func showFilteredImageView(hidden: Bool) {
-        //filteredImageView.hidden = !hidden
+        filteredImageView.hidden = !hidden
     }
 }
