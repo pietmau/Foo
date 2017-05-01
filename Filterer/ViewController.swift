@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
     var imagePresenter: ImagePresenter!
+    let dataSource = MyDataSource()
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
@@ -29,7 +30,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var label: UILabel!
 
     @IBOutlet var collectionView: UICollectionView!
-
 
     @IBAction func onSliderMove(sender: UISlider) {
         imagePresenter.onSliderMove(sender.value)
@@ -74,8 +74,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         slider.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.dataSource = dataSource
+        //collectionView.delegate = self
         //collectionView.registerClass(CollectionViewCell.self, forCellWithReuseIdentifier: "foo")
         colorizeButtons()
     }
@@ -225,19 +225,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func setFilterButtonSelected(selected: Bool) {
         filterButton.selected = selected
-    }
-
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1000
-    }
-
-    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let a = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath) as! CollectionViewCell
-        let image = UIKit.UIImage(named: "scenery")
-        let imageProcessed = Processor(image: image!).applyPredifinedFiltersByName("Red Max").run()
-        a.imageView.image = imageProcessed
-        return a
     }
 }
 
