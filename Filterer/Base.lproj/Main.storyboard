@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -129,7 +128,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scenery" translatesAutoresizingMaskIntoConstraints="NO" id="GZ8-Vk-HXj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="scenery" translatesAutoresizingMaskIntoConstraints="NO" id="GZ8-Vk-HXj">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                         <rect key="frame" x="-131" y="-49" width="240" height="128"/>
@@ -139,27 +138,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="GZ8-Vk-HXj" secondAttribute="bottom" id="AZP-ZY-Czf"/>
-                                            <constraint firstItem="GZ8-Vk-HXj" firstAttribute="leading" secondItem="FsM-Ge-jE6" secondAttribute="leadingMargin" id="G3h-Ij-ZrB"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="GZ8-Vk-HXj" secondAttribute="trailing" constant="-67" id="H20-gl-XRc"/>
-                                            <constraint firstItem="GZ8-Vk-HXj" firstAttribute="top" secondItem="FsM-Ge-jE6" secondAttribute="topMargin" id="qNV-38-oMX"/>
+                                            <constraint firstAttribute="bottom" secondItem="GZ8-Vk-HXj" secondAttribute="bottom" id="DUJ-OD-uNo"/>
+                                            <constraint firstItem="GZ8-Vk-HXj" firstAttribute="top" secondItem="FsM-Ge-jE6" secondAttribute="top" id="idZ-ox-qXA"/>
+                                            <constraint firstItem="GZ8-Vk-HXj" firstAttribute="leading" secondItem="FsM-Ge-jE6" secondAttribute="leading" id="nF1-Cl-f9Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="GZ8-Vk-HXj" secondAttribute="trailing" id="xSK-gB-mFE"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="AZP-ZY-Czf"/>
-                                                <exclude reference="G3h-Ij-ZrB"/>
-                                                <exclude reference="H20-gl-XRc"/>
-                                                <exclude reference="qNV-38-oMX"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="AZP-ZY-Czf"/>
-                                                <include reference="G3h-Ij-ZrB"/>
-                                                <include reference="H20-gl-XRc"/>
-                                                <include reference="qNV-38-oMX"/>
-                                            </mask>
-                                        </variation>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
