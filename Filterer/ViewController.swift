@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
     var imagePresenter: ImagePresenter!
     let dataSource = MyDataSource()
+
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
@@ -75,8 +76,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         slider.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = dataSource
-        //collectionView.delegate = self
-        //collectionView.registerClass(CollectionViewCell.self, forCellWithReuseIdentifier: "foo")
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        collectionView.collectionViewLayout = layout
         colorizeButtons()
     }
 
