@@ -11,12 +11,13 @@ class MyDataSource: NSObject, UICollectionViewDataSource   {
     internal override init(){}
 
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 1000
     }
 
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         return UICollectionViewCell()
+        return collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath)
     }
 
     

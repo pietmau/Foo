@@ -22,6 +22,7 @@
 		AF80D9511EB3DADB009B88E5 /* SimpleRedFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9501EB3DADB009B88E5 /* SimpleRedFilter.swift */; };
 		C54745CC91D96E9A838F3DA2 /* ActionSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474D7C4336D71D4C866A51 /* ActionSheetContainer.swift */; };
 		C547467674F65F73F06386EF /* MyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547475D2C4D763C96F66A3D /* MyDataSource.swift */; };
+		C54748E4A55427D41A113CA7 /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474F6F1F4D3EC023A32B1F /* CollectionViewDelegate.swift */; };
 		C5474C806F4F5C541D37FEC0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54740DBA5AB9D4DCFD5E1A4 /* Presenter.swift */; };
 		C5474D39FA8828C22A19991E /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54744EEED3A8AFD8CCB1184 /* CameraPicker.swift */; };
 		C5474DA49080757D9844CBEC /* PhotoLibraryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547425306E3F500007C71CA /* PhotoLibraryPicker.swift */; };
@@ -50,6 +51,7 @@
 		C547475D2C4D763C96F66A3D /* MyDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDataSource.swift; sourceTree = "<group>"; };
 		C5474C502151EA4394A8B16F /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C5474D7C4336D71D4C866A51 /* ActionSheetContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetContainer.swift; sourceTree = SOURCE_ROOT; };
+		C5474F6F1F4D3EC023A32B1F /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				C54740DBA5AB9D4DCFD5E1A4 /* Presenter.swift */,
 				C5474C502151EA4394A8B16F /* View.swift */,
 				C547475D2C4D763C96F66A3D /* MyDataSource.swift */,
+				C5474F6F1F4D3EC023A32B1F /* CollectionViewDelegate.swift */,
 			);
 			path = Filterer;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				C5474C806F4F5C541D37FEC0 /* Presenter.swift in Sources */,
 				C5474FE23158C7E9908074D2 /* View.swift in Sources */,
 				C547467674F65F73F06386EF /* MyDataSource.swift in Sources */,
+				C54748E4A55427D41A113CA7 /* CollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

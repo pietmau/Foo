@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View, UICollectionViewDataSource, UICollectionViewDelegate {
     var imagePresenter: ImagePresenter!
     @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
@@ -74,7 +74,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         slider.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
-        collectionView.dataSource = MyDataSource()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "foo")
         colorizeButtons()
     }
 
@@ -224,5 +226,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func setFilterButtonSelected(selected: Bool){
         filterButton.selected = selected
     }
+
+    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1000
+    }
+
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+        let a = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath)
+        a.backgroundColor = UIColor.greenColor()
+        return a
+    }
+
+
 }
 
