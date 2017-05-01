@@ -28,6 +28,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet var label: UILabel!
 
+    @IBOutlet var collectionView: UICollectionView!
+
+
     @IBAction func onSliderMove(sender: UISlider) {
         imagePresenter.onSliderMove(sender.value)
     }
@@ -71,6 +74,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         slider.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
+        collectionView.dataSource = MyDataSource()
         colorizeButtons()
     }
 
