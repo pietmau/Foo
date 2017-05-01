@@ -233,12 +233,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let a = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath)
-        a.backgroundColor = UIColor.greenColor()
-//        let imageView = UIKit.UIImageView()
-//        let image = UIKit.UIImage(named: "scenery")
-//        imageView.image = image
-//        a.contentView.addSubview(imageView)
+        let a = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath) as! CollectionViewCell
+        let image = UIKit.UIImage(named: "scenery")
+        let imageProcessed = Processor(image: image!).applyPredifinedFiltersByName("Red Max").run()
+        a.imageView.image = imageProcessed
         return a
     }
 }

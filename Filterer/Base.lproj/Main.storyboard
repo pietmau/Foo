@@ -143,6 +143,9 @@
                                             <constraint firstItem="GZ8-Vk-HXj" firstAttribute="leading" secondItem="FsM-Ge-jE6" secondAttribute="leading" id="nF1-Cl-f9Y"/>
                                             <constraint firstAttribute="trailing" secondItem="GZ8-Vk-HXj" secondAttribute="trailing" id="xSK-gB-mFE"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="GZ8-Vk-HXj" id="hDF-9K-UQM"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
