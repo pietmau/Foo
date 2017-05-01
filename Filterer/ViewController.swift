@@ -76,7 +76,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "foo")
+        //collectionView.registerClass(CollectionViewCell.self, forCellWithReuseIdentifier: "foo")
         colorizeButtons()
     }
 
@@ -219,11 +219,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         slider.value = 0.5
     }
 
-    func setEditButtonSelected(selected: Bool){
+    func setEditButtonSelected(selected: Bool) {
         editButton.selected = selected
     }
 
-    func setFilterButtonSelected(selected: Bool){
+    func setFilterButtonSelected(selected: Bool) {
         filterButton.selected = selected
     }
 
@@ -232,12 +232,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let a = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath)
         a.backgroundColor = UIColor.greenColor()
+//        let imageView = UIKit.UIImageView()
+//        let image = UIKit.UIImage(named: "scenery")
+//        imageView.image = image
+//        a.contentView.addSubview(imageView)
         return a
     }
-
-
 }
 
