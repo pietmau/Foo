@@ -42,7 +42,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-O6-fCb">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-O6-fCb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -114,6 +114,10 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-nW-TGG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Jjc-7H-TSR"/>
+                                    <constraint firstAttribute="width" constant="400" id="Q54-zL-24N"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5XD-S8-v5C">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -160,34 +164,16 @@
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GkC-gd-2H4"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HhA-KY-FzH"/>
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hr8-fN-WFn"/>
-                            <constraint firstItem="4XR-nW-TGG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Urn-uN-iKZ"/>
                             <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" id="VAw-Rk-Dte"/>
+                            <constraint firstItem="4XR-nW-TGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z1q-ce-qHY"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezb-a7-a7E"/>
-                            <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="4XR-nW-TGG" secondAttribute="bottom" id="fgw-zy-IR4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNF-wb-wwY" secondAttribute="bottom" id="gS7-Xm-JhX"/>
-                            <constraint firstAttribute="trailing" secondItem="4XR-nW-TGG" secondAttribute="trailing" constant="80" id="j0V-VL-eb1" userLabel="trailing = Collection View.trailing">
+                            <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="4XR-nW-TGG" secondAttribute="bottom" id="fgw-zy-IR4">
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNF-wb-wwY" secondAttribute="bottom" id="gS7-Xm-JhX"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="bottom" id="r65-Q6-fUQ"/>
                             <constraint firstItem="HVC-fv-o7I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rmz-Pl-RPR"/>
-                            <constraint firstItem="4XR-nW-TGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vFq-Ew-n7m"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Urn-uN-iKZ"/>
-                                <exclude reference="j0V-VL-eb1"/>
-                                <exclude reference="vFq-Ew-n7m"/>
-                                <exclude reference="fgw-zy-IR4"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="Urn-uN-iKZ"/>
-                                <include reference="j0V-VL-eb1"/>
-                                <include reference="vFq-Ew-n7m"/>
-                                <include reference="fgw-zy-IR4"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="blueButton" destination="sNq-be-bSy" id="B7h-tF-rox"/>
@@ -269,7 +255,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dog" width="720" height="720"/>
         <image name="scenery" width="100" height="134"/>
     </resources>
 </document>
