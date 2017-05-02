@@ -20,9 +20,9 @@ public struct PredifinedFilters {
         predefined["Yellow Max"] = YellowMax()
         predefined["Yellow Min"] = YellowMin()
         predefined["Purple Max"] = PurpleMax()
-        predefined["Purple Min"] = PurpleMax()
+        predefined["Purple Min"] = PurpleMin()
         predefined["Sky Max"] = SkyMax()
-        predefined["Sky Min"] = SkyMax()
+        predefined["Sky Min"] = SkyMin()
     }
 
     public func getPredifinedFilterbasedOnName(name: String) -> Filter {

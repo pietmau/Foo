@@ -37,7 +37,7 @@ public class Processor {
         return self
     }
 
-    public func getPredifinedFiltersByName(filtername: String) -> Filter {
+    public static func getPredifinedFiltersByName(filtername: String) -> Filter {
         return PredifinedFilters().getPredifinedFilterbasedOnName(filtername)
     }
 }
