@@ -39,6 +39,9 @@ public class GenericFilter: Filter {
         case .PURPLE:
             pixel.red = UInt8(value)
             pixel.blue = UInt8(value)
+        case .SKY:
+            pixel.green = UInt8(value)
+            pixel.blue = UInt8(value)
         }
         return pixel
     }

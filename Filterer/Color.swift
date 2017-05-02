@@ -12,4 +12,5 @@ public enum Color{
     case GREEN
     case YELLOW
     case PURPLE
+    case SKY
 }

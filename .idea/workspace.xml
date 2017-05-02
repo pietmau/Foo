@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b7fe50-4860-41e9-8e90-aeac1376f2df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/Color.swift" afterPath="$PROJECT_DIR$/Filterer/Color.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/GenericFilter.swift" afterPath="$PROJECT_DIR$/Filterer/GenericFilter.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/MyDataSource.swift" afterPath="$PROJECT_DIR$/Filterer/MyDataSource.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/PredifinedFilters.swift" afterPath="$PROJECT_DIR$/Filterer/PredifinedFilters.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +17,51 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6s_Plus_9.3_x86_64_1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="183" column="39" lean-forward="false" selection-start-line="183" selection-start-column="39" selection-end-line="183" selection-end-column="39" />
+            <state relative-caret-position="272">
+              <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyDataSource.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Filterer/MyDataSource.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="20" column="127" lean-forward="false" selection-start-line="20" selection-start-column="127" selection-end-line="20" selection-end-column="127" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredifinedFilters.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Filterer/PredifinedFilters.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-844">
+              <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenericFilter.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Filterer/GenericFilter.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Color.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Filterer/Color.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -44,6 +87,7 @@
       <find>swit</find>
       <find>register</find>
       <find>sect</find>
+      <find>image</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -57,7 +101,6 @@
         <option value="$PROJECT_DIR$/Filterer/CameraPicker.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/PhotoLibraryPicker.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/CameraPicker.swift" />
-        <option value="$PROJECT_DIR$/Filterer/Color.swift" />
         <option value="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/ConstrainMaker.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" />
@@ -65,14 +108,15 @@
         <option value="$PROJECT_DIR$/Filterer/Processor.swift" />
         <option value="$PROJECT_DIR$/Filterer/Filter.swift" />
         <option value="$PROJECT_DIR$/Filterer/SimpleRedFilter.swift" />
-        <option value="$PROJECT_DIR$/Filterer/PredifinedFilters.swift" />
-        <option value="$PROJECT_DIR$/Filterer/GenericFilter.swift" />
         <option value="$PROJECT_DIR$/Filterer/View.swift" />
         <option value="$PROJECT_DIR$/Filterer/Presenter.swift" />
         <option value="$PROJECT_DIR$/Filterer/CollectionViewDelegate.swift" />
         <option value="$PROJECT_DIR$/Filterer/CollectionViewCell.swift" />
-        <option value="$PROJECT_DIR$/Filterer/MyDataSource.swift" />
         <option value="$PROJECT_DIR$/Filterer/ViewController.swift" />
+        <option value="$PROJECT_DIR$/Filterer/Color.swift" />
+        <option value="$PROJECT_DIR$/Filterer/GenericFilter.swift" />
+        <option value="$PROJECT_DIR$/Filterer/PredifinedFilters.swift" />
+        <option value="$PROJECT_DIR$/Filterer/MyDataSource.swift" />
       </list>
     </option>
   </component>
@@ -126,6 +170,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Filterer" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filterer" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filterer" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filters" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,7 +289,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48491000" />
+    <option name="totallyTimeSpent" value="49940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1427" height="824" extended-state="0" />
@@ -275,12 +337,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/GenericFilter.swift</url>
-          <line>47</line>
+          <line>50</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/GenericFilter.swift</url>
-          <line>46</line>
+          <line>49</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
@@ -514,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Filterer/Color.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/ConstrainMaker.swift" />
     <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" />
     <entry file="file://$PROJECT_DIR$/Filterer/RGBAImage.swift">
@@ -541,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Filterer/PredifinedFilters.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -586,14 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Filterer/GenericFilter.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -601,26 +641,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/CollectionViewDelegate.swift" />
     <entry file="file://$PROJECT_DIR$/Filterer/CollectionViewCell.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="120">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Filterer/CollectionViewDelegate.swift" />
-    <entry file="file://$PROJECT_DIR$/Filterer/MyDataSource.swift">
+    <entry file="file://$PROJECT_DIR$/Filterer/Color.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/GenericFilter.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/PredifinedFilters.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-844">
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="183" column="39" lean-forward="false" selection-start-line="183" selection-start-column="39" selection-end-line="183" selection-end-column="39" />
+        <state relative-caret-position="272">
+          <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/MyDataSource.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="127" lean-forward="false" selection-start-line="20" selection-start-column="127" selection-end-line="20" selection-end-column="127" />
           <folding />
         </state>
       </provider>
