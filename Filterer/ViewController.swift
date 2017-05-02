@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
+
     var imagePresenter: ImagePresenter!
+
     let dataSource = MyDataSource()
 
     @IBOutlet var secondaryMenu: UIView!
@@ -140,25 +142,47 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showSecondaryMenu() {
-        view.addSubview(secondaryMenu)
-        let bottomConstraint = secondaryMenu.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
-        let leftConstraint = secondaryMenu.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
-        let rightConstraint = secondaryMenu.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
-        let heightConstraint = secondaryMenu.heightAnchor.constraintEqualToConstant(44)
-        NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
-        view.layoutIfNeeded()
-        secondaryMenu.alpha = 0
-        UIView.animateWithDuration(0.4) {
-            self.secondaryMenu.alpha = 1.0
-        }
+        showCollectionView(true)
+
+//        view.addSubview(secondaryMenu)
+//        let bottomConstraint = secondaryMenu.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
+//        let leftConstraint = secondaryMenu.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
+//        let rightConstraint = secondaryMenu.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
+//        let heightConstraint = secondaryMenu.heightAnchor.constraintEqualToConstant(44)
+//        NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
+//        view.layoutIfNeeded()
+//        secondaryMenu.alpha = 0
+//        UIView.animateWithDuration(0.4) {
+//            self.secondaryMenu.alpha = 1.0
+//        }
     }
 
     func hideSecondaryMenu() {
-        UIView.animateWithDuration(0.4, animations: {
-            self.secondaryMenu.alpha = 0
-        }) { completed in
-            if completed == true {
-                self.secondaryMenu.removeFromSuperview()
+        showCollectionView(false)
+
+//        UIView.animateWithDuration(0.4, animations: {
+//            self.secondaryMenu.alpha = 0
+//        }) { completed in
+//            if completed == true {
+//                self.secondaryMenu.removeFromSuperview()
+//            }
+//        }
+    }
+
+    private func showCollectionView(show: Bool) {
+        if (show) { //TODO use autolyout
+            collectionView.hidden = false
+            collectionView.alpha = 0
+            UIView.animateWithDuration(0.4) {
+                self.collectionView.alpha = 1.0
+            }
+        } else {
+            UIView.animateWithDuration(0.4, animations: {
+                self.collectionView.alpha = 0
+            }) { completed in
+                if completed == true {
+                    self.collectionView.hidden = true
+                }
             }
         }
     }

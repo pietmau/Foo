@@ -111,12 +111,11 @@
                                     <constraint firstAttribute="trailing" secondItem="mAB-Ff-DGi" secondAttribute="trailing" id="ZVH-ld-wzx"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-nW-TGG">
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-nW-TGG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="Jjc-7H-TSR"/>
-                                    <constraint firstAttribute="width" constant="400" id="Q54-zL-24N"/>
+                                    <constraint firstAttribute="height" constant="44" id="Jjc-7H-TSR"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5XD-S8-v5C">
                                     <size key="itemSize" width="50" height="50"/>
@@ -164,6 +163,7 @@
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GkC-gd-2H4"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HhA-KY-FzH"/>
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hr8-fN-WFn"/>
+                            <constraint firstAttribute="trailing" secondItem="4XR-nW-TGG" secondAttribute="trailing" id="SeS-U6-0xk"/>
                             <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" id="VAw-Rk-Dte"/>
                             <constraint firstItem="4XR-nW-TGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z1q-ce-qHY"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezb-a7-a7E"/>
