@@ -78,7 +78,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Compare"/>
                                                 <connections>
-                                                    <action selector="onCompareClickUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1r-3z-Bh3"/>
+                                                    <action selector="onCompareClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1r-3z-Bh3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-YW-riu">

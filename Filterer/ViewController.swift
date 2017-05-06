@@ -1,6 +1,7 @@
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+        ActionSheetWrapperDelegate, View {
 
     var presenter: ImagePresenter!
 
@@ -25,8 +26,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presenter.onEditClicked(sender)
     }
 
-    @IBAction func onCompareClickUp(sender: UIButton) {
-        presenter.onCompareClickUp(sender)
+    @IBAction func onCompareClick(sender: UIButton) {
+        presenter.onCompareClick(sender)
     }
 
     @IBAction func onTouchUpInsideImage(sender: AnyObject) {

@@ -35,8 +35,6 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         view.showCollectionView(false)
         view.showSlider(false)
         view.setCompareButtonEnabled(false)
-        view.setCompareButtonEnabled(false)
-        view.setEditButtonEnabled(false)
         view.setEditButtonEnabled(false)
         currentFilter = nil
     }
@@ -61,7 +59,7 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         }
     }
 
-    func onCompareClickUp(sender: UIButton) {
+    func onCompareClick(sender: UIButton) {
         if (sender.selected) {
             sender.selected = false
             view.showFilteredImageView(true)
