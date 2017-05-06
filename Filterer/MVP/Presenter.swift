@@ -81,10 +81,10 @@ class ImagePresenter {
 
     func onFilter(sender: UIButton) {
         if (sender.selected) {
-            view.hideSecondaryMenu()
+            view.showCollectionView(true)
             sender.selected = false
         } else {
-            view.showSecondaryMenu()
+            view.showCollectionView(true)
             view.setEditButtonSelected(false)
             view.showSlider(false)
             sender.selected = true
@@ -108,7 +108,7 @@ class ImagePresenter {
         } else {
             sender.selected = true
             view.setFilterButtonSelected(false)
-            view.hideSecondaryMenu()
+            view.showCollectionView(true)
             view.showSlider(true)
         }
     }

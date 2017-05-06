@@ -22,7 +22,6 @@
 		AF80D9511EB3DADB009B88E5 /* SimpleRedFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80D9501EB3DADB009B88E5 /* SimpleRedFilter.swift */; };
 		C54745CC91D96E9A838F3DA2 /* ActionSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474D7C4336D71D4C866A51 /* ActionSheetContainer.swift */; };
 		C547467674F65F73F06386EF /* MyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C547475D2C4D763C96F66A3D /* MyDataSource.swift */; };
-		C54746B8576D67249CCA7082 /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474BB761719646F9B325C3 /* CollectionViewDelegate.swift */; };
 		C5474974D7A617196E9EF719 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474661FFC2E98894AA8EA1 /* View.swift */; };
 		C5474C6CBF28752DE6761007 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474C4840E65FC49B4144E0 /* CollectionViewCell.swift */; };
 		C5474CD6CC716D0672274A9F /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5474A5ED9DFA8F4046E8565 /* Presenter.swift */; };
@@ -51,7 +50,6 @@
 		C5474661FFC2E98894AA8EA1 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C547475D2C4D763C96F66A3D /* MyDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDataSource.swift; sourceTree = "<group>"; };
 		C5474A5ED9DFA8F4046E8565 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		C5474BB761719646F9B325C3 /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
 		C5474C4840E65FC49B4144E0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C5474D7C4336D71D4C866A51 /* ActionSheetContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetContainer.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -97,7 +95,6 @@
 				C547475D2C4D763C96F66A3D /* MyDataSource.swift */,
 				C5474C4840E65FC49B4144E0 /* CollectionViewCell.swift */,
 				C5474403E02D29C6D4DB0A02 /* MVP */,
-				C5474BB761719646F9B325C3 /* CollectionViewDelegate.swift */,
 			);
 			path = Filterer;
 			sourceTree = "<group>";
@@ -223,7 +220,6 @@
 				C5474C6CBF28752DE6761007 /* CollectionViewCell.swift in Sources */,
 				C5474CD6CC716D0672274A9F /* Presenter.swift in Sources */,
 				C5474974D7A617196E9EF719 /* View.swift in Sources */,
-				C54746B8576D67249CCA7082 /* CollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

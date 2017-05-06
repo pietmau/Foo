@@ -13,9 +13,7 @@ protocol  View {
 
     func showFilteredImageView(show: Bool)
 
-    func hideSecondaryMenu()
-
-    func showSecondaryMenu()
+    func showCollectionView(show: Bool)
 
     func setCompareButtonSelected(selected: Bool)
 

@@ -14,23 +14,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     let dataSource = MyDataSource()
 
-    @IBOutlet var secondaryMenu: UIView!
     @IBOutlet var bottomMenu: UIView!
     @IBOutlet var filterButton: UIButton!
     @IBOutlet var compareButton: UIButton!
     @IBOutlet var editButton: UIButton!
     @IBOutlet var slider: UISlider!
 
-    @IBOutlet var redButton: UIButton!
-    @IBOutlet var greenButton: UIButton!
-    @IBOutlet var blueButton: UIButton!
-    @IBOutlet var yellowButton: UIButton!
-    @IBOutlet var purpleButton: UIButton!
-
     @IBOutlet var originalImageView: UIImageView!
     @IBOutlet var filteredImageView: UIImageView!
-
-    @IBOutlet var label: UILabel!
 
     @IBOutlet var collectionView: UICollectionView!
 
@@ -40,26 +31,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBAction func onEditClicked(sender: UIButton) {
         imagePresenter.onEditClicked(sender)
-    }
-
-    @IBAction func onGreenSelected(sender: AnyObject) {
-        imagePresenter!.onGreenSelected()
-    }
-
-    @IBAction func onRedSelected(sender: AnyObject) {
-        imagePresenter!.onRedSelected()
-    }
-
-    @IBAction func onBlueSelected(sender: AnyObject) {
-        imagePresenter!.onBlueSelected()
-    }
-
-    @IBAction func onYellowSelected(sender: AnyObject) {
-        imagePresenter!.onYellowSelected()
-    }
-
-    @IBAction func onPurpleSelected(sender: UIButton) {
-        imagePresenter!.onPurpleSelected()
     }
 
     @IBAction func onCompareClickUp(sender: UIButton) {
@@ -73,30 +44,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
-        secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
-        secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         slider.translatesAutoresizingMaskIntoConstraints = false
         imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = dataSource
-        collectionView.delegate = CollectionViewDelegate()
+        //collectionView.delegate = CollectionViewDelegate()
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         collectionView.collectionViewLayout = layout
-        colorizeButtons()
     }
 
     func setOriginalImage(image: UIKit.UIImage) {
         originalImageView.image = image
-    }
-
-    private func colorizeButtons() {
-        let image = UIKit.UIImage(named: "scenery")
-        redButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Red Max").run(), forState: .Normal)
-        greenButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Green Max").run(), forState: .Normal)
-        blueButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Blue Max").run(), forState: .Normal)
-        yellowButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Yellow Max").run(), forState: .Normal)
-        purpleButton.setImage(Processor(image: image!).applyPredifinedFiltersByName("Purple Max").run(), forState: .Normal)
     }
 
     func setFilteredImage(image: UIImage) {
@@ -143,35 +102,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePresenter.onFilter(sender)
     }
 
-    func showSecondaryMenu() {
-        showCollectionView(true)
-
-//        view.addSubview(secondaryMenu)
-//        let bottomConstraint = secondaryMenu.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
-//        let leftConstraint = secondaryMenu.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
-//        let rightConstraint = secondaryMenu.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
-//        let heightConstraint = secondaryMenu.heightAnchor.constraintEqualToConstant(44)
-//        NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
-//        view.layoutIfNeeded()
-//        secondaryMenu.alpha = 0
-//        UIView.animateWithDuration(0.4) {
-//            self.secondaryMenu.alpha = 1.0
-//        }
-    }
-
-    func hideSecondaryMenu() {
-        showCollectionView(false)
-
-//        UIView.animateWithDuration(0.4, animations: {
-//            self.secondaryMenu.alpha = 0
-//        }) { completed in
-//            if completed == true {
-//                self.secondaryMenu.removeFromSuperview()
-//            }
-//        }
-    }
-
-    private func showCollectionView(show: Bool) {
+    func showCollectionView(show: Bool) {
         if (show) { //TODO use autolyout
             collectionView.hidden = false
             collectionView.alpha = 0
@@ -220,7 +151,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showSlider(show: Bool) {
-        if (show) {
+        if (show) {//TODO use hidden
             view.addSubview(slider)
             let bottomConstraint = slider.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
             let leftConstraint = slider.leftAnchor.constraintEqualToAnchor(view.leftAnchor)

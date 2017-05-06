@@ -176,72 +176,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueButton" destination="sNq-be-bSy" id="B7h-tF-rox"/>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
                         <outlet property="collectionView" destination="4XR-nW-TGG" id="UPw-om-yVH"/>
                         <outlet property="compareButton" destination="tPg-2N-f93" id="Lmt-4i-buV"/>
                         <outlet property="editButton" destination="4vx-YW-riu" id="1Eo-xG-MYa"/>
                         <outlet property="filterButton" destination="C6B-1F-j0K" id="6Kf-1q-zun"/>
                         <outlet property="filteredImageView" destination="FRd-O6-fCb" id="jKk-7x-3wl"/>
-                        <outlet property="greenButton" destination="axt-GK-a6m" id="Bdf-hN-vUU"/>
-                        <outlet property="label" destination="HVC-fv-o7I" id="tUu-1Z-rjj"/>
                         <outlet property="originalImageView" destination="aND-Em-4Dd" id="CGJ-xY-j6A"/>
-                        <outlet property="purpleButton" destination="7P8-VM-YCw" id="0yT-IN-djB"/>
-                        <outlet property="redButton" destination="Drk-Kp-614" id="jBV-uo-YuG"/>
-                        <outlet property="secondaryMenu" destination="ePS-oG-ZHP" id="Be7-JW-Iwe"/>
                         <outlet property="slider" destination="2bz-vO-2Oe" id="tY2-eV-cIL"/>
-                        <outlet property="yellowButton" destination="zUq-ef-bpc" id="l8h-ub-uoq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="ePS-oG-ZHP">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n3M-NR-6VP">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-Kp-614">
-                                    <rect key="frame" x="0.0" y="0.0" width="48" height="128"/>
-                                    <connections>
-                                        <action selector="onRedSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGA-XN-DX8"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axt-GK-a6m">
-                                    <rect key="frame" x="48" y="0.0" width="48" height="128"/>
-                                    <connections>
-                                        <action selector="onGreenSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz1-yD-xul"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-be-bSy">
-                                    <rect key="frame" x="96" y="0.0" width="48" height="128"/>
-                                    <connections>
-                                        <action selector="onBlueSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbb-4d-ckh"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUq-ef-bpc">
-                                    <rect key="frame" x="144" y="0.0" width="48" height="128"/>
-                                    <connections>
-                                        <action selector="onYellowSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xl6-MJ-J3B"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-VM-YCw">
-                                    <rect key="frame" x="192" y="0.0" width="48" height="128"/>
-                                    <connections>
-                                        <action selector="onPurpleSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUD-1Y-TvG"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="n3M-NR-6VP" secondAttribute="trailing" id="23L-58-Mzz"/>
-                        <constraint firstAttribute="bottom" secondItem="n3M-NR-6VP" secondAttribute="bottom" id="IFa-Q5-UOE"/>
-                        <constraint firstItem="n3M-NR-6VP" firstAttribute="top" secondItem="ePS-oG-ZHP" secondAttribute="top" id="ciD-QT-Tl9"/>
-                        <constraint firstItem="n3M-NR-6VP" firstAttribute="leading" secondItem="ePS-oG-ZHP" secondAttribute="leading" id="uEa-cd-VyS"/>
-                    </constraints>
-                </view>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="2bz-vO-2Oe">
                     <rect key="frame" x="0.0" y="0.0" width="118" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
