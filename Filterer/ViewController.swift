@@ -48,9 +48,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = dataSource
         collectionView.delegate = presenter
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-        collectionView.collectionViewLayout = layout
+        let bar=collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        bar.scrollDirection = UICollectionViewScrollDirection.Horizontal
     }
 
     func setOriginalImage(image: UIKit.UIImage) {
@@ -150,7 +149,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showSlider(show: Bool) {
-        if (show) {//TODO use hidden
+        if (show) {
             slider.hidden = false
             slider.alpha = 0
             UIView.animateWithDuration(0.4) {

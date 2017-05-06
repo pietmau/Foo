@@ -11,7 +11,8 @@ import UIKit
 
 public class Processor {
     private var filters: [Filter] = []
-    private let filtersNames: [String] = ["Red Max", "Blue Max", "Green Max", "Yellow Max", "Purple Max", "Sky Max"]
+    private let filtersNames: [String] = ["Red Max", "Blue Max", "Green Max", "Yellow Max", "Purple Max", "Sky Max",
+                                          "Red Max", "Blue Max", "Green Max", "Yellow Max", "Purple Max", "Sky Max"]
     private let image: RGBAImage?
     private let predefinedFilters = PredifinedFilters()
 
