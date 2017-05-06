@@ -53,7 +53,7 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
 
     func onFilter(sender: UIButton) {
         if (sender.selected) {
-            view.showCollectionView(true)
+            view.showCollectionView(false)
             sender.selected = false
         } else {
             view.showCollectionView(true)
@@ -80,7 +80,7 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         } else {
             sender.selected = true
             view.setFilterButtonSelected(false)
-            view.showCollectionView(true)
+            view.showCollectionView(false)
             view.showSlider(true)
         }
     }
