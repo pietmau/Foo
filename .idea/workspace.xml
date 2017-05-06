@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4b7fe50-4860-41e9-8e90-aeac1376f2df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/ViewController.swift" afterPath="$PROJECT_DIR$/Filterer/ViewController.swift" />
-    </list>
+    <list default="true" id="c4b7fe50-4860-41e9-8e90-aeac1376f2df" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,21 +12,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6s_Plus_9.3_x86_64_1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="216">
+              <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Presenter.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Presenter.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="71">
+              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -76,7 +73,6 @@
         <option value="$PROJECT_DIR$/Filterer/CameraPicker.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/PhotoLibraryPicker.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/CameraPicker.swift" />
-        <option value="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/ConstrainMaker.swift" />
         <option value="$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" />
         <option value="$PROJECT_DIR$/Filterer/RGBAImage.swift" />
@@ -95,8 +91,9 @@
         <option value="$PROJECT_DIR$/ActionSheetContainer.swift" />
         <option value="$PROJECT_DIR$/Filterer/CollectionView/CollectionViewCell.swift" />
         <option value="$PROJECT_DIR$/Filterer/CollectionView/MyDataSource.swift" />
-        <option value="$PROJECT_DIR$/Filterer/MVP/Presenter.swift" />
+        <option value="$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard" />
         <option value="$PROJECT_DIR$/Filterer/ViewController.swift" />
+        <option value="$PROJECT_DIR$/Filterer/MVP/Presenter.swift" />
       </list>
     </option>
   </component>
@@ -308,7 +305,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66240000" />
+    <option name="totallyTimeSpent" value="66777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1427" height="824" extended-state="0" />
@@ -318,7 +315,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5298013" sideWeight="0.5024527" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33245033" sideWeight="0.4975473" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33245033" sideWeight="0.4975473" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -359,12 +356,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>71</line>
+          <line>72</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -384,7 +381,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>36</line>
+          <line>37</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
@@ -576,14 +573,6 @@
     <entry file="file://$PROJECT_DIR$/Filterer/Assets.xcassets/CameraPicker.swift" />
     <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/ConstrainMaker.swift" />
     <entry file="file://$PROJECT_DIR$/Filterer/MyClasses/Helper.swift" />
-    <entry file="file://$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="62" column="62" lean-forward="true" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/CollectionViewDelegate.swift" />
     <entry file="file://$PROJECT_DIR$/Filterer/MVP/FilterList.m" />
     <entry file="file://$PROJECT_DIR$/Filterer/MVP/FilterList.h" />
@@ -682,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,18 +682,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/Base.lproj/Main.storyboard">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="62" column="62" lean-forward="true" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="216">
+          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        <state relative-caret-position="71">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
           <folding />
         </state>
       </provider>

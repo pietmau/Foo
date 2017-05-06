@@ -93,4 +93,12 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         currentFilter = processor.getPredifinedFiltersByPosition(indexPath.item)
         setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
+
+    func onTouchUpInsideImage() {
+        view.showFilteredImageView(true)
+    }
+
+    func onTouchDownImage() {
+        view.showFilteredImageView(false)
+    }
 }

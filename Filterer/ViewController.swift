@@ -29,11 +29,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presenter.onCompareClickUp(sender)
     }
 
-    @IBAction func onTouchUpInside(sender: AnyObject) {
-        
+    @IBAction func onTouchUpInsideImage(sender: AnyObject) {
+        presenter.onTouchUpInsideImage()
     }
 
-    @IBAction func onTouchDown(sender: AnyObject) {
+    @IBAction func onTouchDownImage(sender: AnyObject) {
+        presenter.onTouchDownImage()
     }
 
     override func viewDidLoad() {
