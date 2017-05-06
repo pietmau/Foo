@@ -191,16 +191,6 @@
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="bottom" id="r65-Q6-fUQ"/>
                             <constraint firstItem="HVC-fv-o7I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rmz-Pl-RPR"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="2bz-vO-2Oe"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="2bz-vO-2Oe"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
