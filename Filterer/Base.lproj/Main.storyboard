@@ -152,6 +152,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2bz-vO-2Oe">
+                                <rect key="frame" x="0.0" y="0.0" width="118" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D4i-B5-1gz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="lct-Gd-G3l"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -163,17 +173,34 @@
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GkC-gd-2H4"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HhA-KY-FzH"/>
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hr8-fN-WFn"/>
+                            <constraint firstItem="2bz-vO-2Oe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Riy-xF-C45">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="4XR-nW-TGG" secondAttribute="trailing" id="SeS-U6-0xk"/>
                             <constraint firstAttribute="trailing" secondItem="aND-Em-4Dd" secondAttribute="trailing" id="VAw-Rk-Dte"/>
                             <constraint firstItem="4XR-nW-TGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z1q-ce-qHY"/>
+                            <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="2bz-vO-2Oe" secondAttribute="bottom" id="aK5-Rb-Djq"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ezb-a7-a7E"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="4XR-nW-TGG" secondAttribute="bottom" id="fgw-zy-IR4">
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNF-wb-wwY" secondAttribute="bottom" id="gS7-Xm-JhX"/>
+                            <constraint firstAttribute="trailing" secondItem="2bz-vO-2Oe" secondAttribute="trailing" constant="276" id="ofT-nr-aWa">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="bottom" id="r65-Q6-fUQ"/>
                             <constraint firstItem="HVC-fv-o7I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rmz-Pl-RPR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2bz-vO-2Oe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2bz-vO-2Oe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomMenu" destination="JNF-wb-wwY" id="jTm-2q-PDu"/>
@@ -187,14 +214,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="2bz-vO-2Oe">
-                    <rect key="frame" x="0.0" y="0.0" width="118" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <action selector="onSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="lct-Gd-G3l"/>
-                    </connections>
-                </slider>
             </objects>
             <point key="canvasLocation" x="387" y="328.5"/>
         </scene>

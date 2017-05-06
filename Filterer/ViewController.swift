@@ -45,7 +45,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
-        slider.translatesAutoresizingMaskIntoConstraints = false
         presenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = dataSource
         collectionView.delegate = presenter
@@ -152,13 +151,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func showSlider(show: Bool) {
         if (show) {//TODO use hidden
-            view.addSubview(slider)
-            let bottomConstraint = slider.bottomAnchor.constraintEqualToAnchor(bottomMenu.topAnchor)
-            let leftConstraint = slider.leftAnchor.constraintEqualToAnchor(view.leftAnchor)
-            let rightConstraint = slider.rightAnchor.constraintEqualToAnchor(view.rightAnchor)
-            let heightConstraint = slider.heightAnchor.constraintEqualToConstant(44)
-            NSLayoutConstraint.activateConstraints([bottomConstraint, leftConstraint, rightConstraint, heightConstraint])
-            view.layoutIfNeeded()
+            slider.hidden = false
             slider.alpha = 0
             UIView.animateWithDuration(0.4) {
                 self.slider.alpha = 1.0
@@ -168,13 +161,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.slider.alpha = 0
             }) { completed in
                 if completed == true {
-                    self.slider.removeFromSuperview()
+                    self.slider.hidden = true
                 }
             }
         }
     }
 
-    public func resetSlider() {
+    internal func resetSlider() {
         slider.value = 0.5
     }
 

@@ -90,7 +90,6 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         setFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage()!)
     }
 
-
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         view.resetSlider()
         currentFilter = processor.getPredifinedFiltersByPosition(indexPath.item)
