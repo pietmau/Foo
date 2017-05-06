@@ -2,9 +2,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
         ActionSheetWrapperDelegate, View {
-
     var presenter: ImagePresenter!
-
     let dataSource = MyDataSource()
 
     @IBOutlet var bottomMenu: UIView!
@@ -12,10 +10,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var compareButton: UIButton!
     @IBOutlet var editButton: UIButton!
     @IBOutlet var slider: UISlider!
-
     @IBOutlet var originalImageView: UIImageView!
     @IBOutlet var filteredImageView: UIImageView!
-
     @IBOutlet var collectionView: UICollectionView!
 
     @IBAction func onSliderMove(sender: UISlider) {
@@ -31,11 +27,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func onTouchUpInsideImage(sender: AnyObject) {
-        presenter.onTouchUpInsideImage()
+        if (!compareButton.selected) {
+            presenter.onTouchUpInsideImage()
+        }
     }
 
     @IBAction func onTouchDownImage(sender: AnyObject) {
-        presenter.onTouchDownImage()
+        if (!compareButton.selected) {
+            presenter.onTouchDownImage()
+        }
     }
 
     override func viewDidLoad() {
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(ActionSheetWrapper(delegate: self).getSheet(), animated: true, completion: nil)
     }
 
-    func showCamera() {// TODO check if on emulator
+    func showCamera() {
         let cameraPicker = CameraPicker(delegate: self)
         presentViewController(cameraPicker, animated: true, completion: nil)
     }
