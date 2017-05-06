@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Filterer
-//
-//  Created by Jack on 2015-09-22.
-//  Copyright © 2015 UofT. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
@@ -48,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = dataSource
         collectionView.delegate = presenter
-        let bar=collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let bar = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         bar.scrollDirection = UICollectionViewScrollDirection.Horizontal
     }
 
@@ -101,39 +93,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showCollectionView(show: Bool) {
-        if (show) { //TODO use autolyout
-            collectionView.hidden = false
-            collectionView.alpha = 0
-            UIView.animateWithDuration(0.4) {
-                self.collectionView.alpha = 1.0
-            }
-        } else {
-            UIView.animateWithDuration(0.4, animations: {
-                self.collectionView.alpha = 0
-            }) { completed in
-                if completed == true {
-                    self.collectionView.hidden = true
-                }
-            }
-        }
+        showView(collectionView, show: show)
     }
 
     func showFilteredImageView(show: Bool) {
-        if (show) { //TODO use autolyout
-            filteredImageView.hidden = false
-            filteredImageView.alpha = 0
-            UIView.animateWithDuration(0.4) {
-                self.filteredImageView.alpha = 1.0
-            }
-        } else {
-            UIView.animateWithDuration(0.4, animations: {
-                self.filteredImageView.alpha = 0
-            }) { completed in
-                if completed == true {
-                    self.filteredImageView.hidden = true
-                }
-            }
-        }
+        showView(filteredImageView, show: show)
     }
 
     func setCompareButtonSelected(selected: Bool) {
@@ -149,22 +113,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showSlider(show: Bool) {
+        showView(slider, show: show)
+    }
+
+    func showView(view: UIView, show: Bool) {
         if (show) {
-            slider.hidden = false
-            slider.alpha = 0
+            view.hidden = false
+            view.alpha = 0
             UIView.animateWithDuration(0.4) {
-                self.slider.alpha = 1.0
+                view.alpha = 1.0
             }
         } else {
             UIView.animateWithDuration(0.4, animations: {
-                self.slider.alpha = 0
+                view.alpha = 0
             }) { completed in
                 if completed == true {
-                    self.slider.hidden = true
+                    view.hidden = true
                 }
             }
         }
     }
+
 
     internal func resetSlider() {
         slider.value = 0.5
