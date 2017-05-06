@@ -10,14 +10,11 @@ class MyDataSource: NSObject, UICollectionViewDataSource {
     private let defaultImage = UIKit.UIImage(named: "scenery")
     private let processor = Processor()
 
-    internal override init() {
-    }
-
-    internal func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return processor.filterCount()
     }
 
-    internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath) as! CollectionViewCell
         let filter = processor.getPredifinedFiltersByPosition(indexPath.item)
         cell.imageView.image = filter.apply(RGBAImage(image: defaultImage!)!).toUIImage()

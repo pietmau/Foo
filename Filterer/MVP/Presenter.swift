@@ -13,23 +13,23 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
     private var currentFilter: Filter?
     private let processor = Processor()
 
-    internal init(view: View, originalImage: UIKit.UIImage) {
+    init(view: View, originalImage: UIKit.UIImage) {
         self.view = view
         super.init()
         setOriginalImage(originalImage)
     }
 
-    internal func setOriginalImage(originalImage: UIKit.UIImage) {
+    func setOriginalImage(originalImage: UIKit.UIImage) {
         self.originalImage = originalImage
         view.setOriginalImage(originalImage)
     }
 
-    internal func setFilteredImage(filteredImage: UIKit.UIImage) {
+    func setFilteredImage(filteredImage: UIKit.UIImage) {
         self.filteredImage = filteredImage
         view.setFilteredImage(filteredImage)
     }
 
-    internal func onImagePicked(image: UIImage) {
+    func onImagePicked(image: UIImage) {
         setOriginalImage(image)
         view.showFilteredImageView(false)
         view.showCollectionView(false)
@@ -41,7 +41,7 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         currentFilter = nil
     }
 
-    internal func onCompareClicked(button: UIButton) {
+    func onCompareClicked(button: UIButton) {
         if (button.selected) {
             view.setCompareButtonSelected(false)
             view.showFilteredImageView(true)
