@@ -36,6 +36,8 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
         view.showSlider(false)
         view.setCompareButtonEnabled(false)
         view.setEditButtonEnabled(false)
+        view.setCompareButtonSelected(false)
+        view.setEditButtonSelected(false)
         currentFilter = nil
     }
 
