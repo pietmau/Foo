@@ -14,6 +14,7 @@ public class Processor {
     private let filtersNames: [String] = ["Red 0", "Red Max", "Blue 0", "Blue Max", "Green 0", "Green Max",
                                           "Yellow Max", "Yellow Min", "Purple Max", "Purple Min", "Sky Max", "Sky Min"]
     private let image: RGBAImage?
+    private let predefinedFilters = PredifinedFilters()
 
     public init(image: UIImage) {
         self.image = RGBAImage(image: image)!
@@ -36,16 +37,16 @@ public class Processor {
     }
 
     internal func applyPredifinedFiltersByName(filtername: String) -> Processor {
-        applyFilter(PredifinedFilters().getPredifinedFilterbasedOnName(filtername))
+        applyFilter(predefinedFilters.getPredifinedFilterbasedOnName(filtername))
         return self
     }
 
     internal func getPredifinedFiltersByName(filtername: String) -> Filter {
-        return PredifinedFilters().getPredifinedFilterbasedOnName(filtername)
+        return predefinedFilters.getPredifinedFilterbasedOnName(filtername)
     }
 
     internal func getPredifinedFiltersByPosition(position: Int) -> Filter {
-        return PredifinedFilters().getPredifinedFilterbasedOnName(filtersNames[position])
+        return predefinedFilters.getPredifinedFilterbasedOnName(filtersNames[position])
     }
 
     internal func filterCount() ->Int{

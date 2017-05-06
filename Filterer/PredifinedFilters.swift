@@ -8,25 +8,28 @@
 
 
 public struct PredifinedFilters {
-    var predefined: [String: Filter] = [:]
 
     public init() {
-        predefined["Red 0"] = RedZero()
-        predefined["Red Max"] = RedMax()
-        predefined["Blue 0"] = BlueZero()
-        predefined["Blue Max"] = BlueMax()
-        predefined["Green 0"] = GreenZero()
-        predefined["Green Max"] = GreenMax()
-        predefined["Yellow Max"] = YellowMax()
-        predefined["Yellow Min"] = YellowMin()
-        predefined["Purple Max"] = PurpleMax()
-        predefined["Purple Min"] = PurpleMin()
-        predefined["Sky Max"] = SkyMax()
-        predefined["Sky Min"] = SkyMin()
+
     }
 
-    public func getPredifinedFilterbasedOnName(name: String) -> Filter {
-        return predefined[name]!
+    public func getPredifinedFilterbasedOnName(name: String) -> Filter! {
+        switch name {
+        case "Red 0": return RedZero()
+        case "Red Max": return RedMax()
+        case "Blue 0": return BlueZero()
+        case "Blue Max": return BlueMax()
+        case "Green 0": return GreenZero()
+        case "Green Max": return GreenMax()
+        case "Yellow Max": return YellowMax()
+        case "Yellow Min": return YellowMin()
+        case "Purple Max": return PurpleMax()
+        case "Purple Min": return PurpleMin()
+        case "Sky Max": return SkyMax()
+        case "Sky Min": return SkyMin()
+        default:
+            return nil
+        }
     }
 
     public class YellowMax: GenericFilter {
@@ -100,5 +103,4 @@ public struct PredifinedFilters {
             super.init(color: Color.SKY, value: 0)
         }
     }
-
 }

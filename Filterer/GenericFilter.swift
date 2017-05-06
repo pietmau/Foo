@@ -47,7 +47,10 @@ public class GenericFilter: Filter {
     }
 
     public func setIntensity(intensity: Float) -> Filter {
-        value = Int(Float(value) * intensity * 2)
+        var bar = Int(Float(value) * intensity * 2)
+        bar = min(255, bar)
+        bar = max(0, bar)
+        value = bar
         return self
     }
 }
