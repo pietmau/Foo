@@ -66,10 +66,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func showCamera() {// TODO check if on emulator
-        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-            let cameraPicker = CameraPicker(delegate: self)
-            presentViewController(cameraPicker, animated: true, completion: nil)
-        }
+        let cameraPicker = CameraPicker(delegate: self)
+        presentViewController(cameraPicker, animated: true, completion: nil)
     }
 
     func showAlbum() {

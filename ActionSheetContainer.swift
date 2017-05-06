@@ -13,16 +13,18 @@ class ActionSheetWrapper {
 
     init(delegate: ActionSheetWrapperDelegate) {
         actionSheet = UIAlertController(title: "New Photo", message: nil, preferredStyle: .ActionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { action in
-            delegate.showCamera()
-        }))
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+            actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { action in
+                delegate.showCamera()
+            }))
+        }
         actionSheet.addAction(UIAlertAction(title: "Album", style: .Default, handler: { action in
             delegate.showAlbum()
         }))
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
     }
 
-    func getSheet()->UIAlertController {
+    func getSheet() -> UIAlertController {
         return actionSheet
     }
 
