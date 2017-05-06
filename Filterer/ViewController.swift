@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ActionSheetWrapperDelegate, View {
 
-    var imagePresenter: ImagePresenter!
+    var presenter: ImagePresenter!
 
     let dataSource = MyDataSource()
 
@@ -26,19 +26,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var collectionView: UICollectionView!
 
     @IBAction func onSliderMove(sender: UISlider) {
-        imagePresenter.onSliderMove(sender.value)
+        presenter.onSliderMove(sender.value)
     }
 
     @IBAction func onEditClicked(sender: UIButton) {
-        imagePresenter.onEditClicked(sender)
+        presenter.onEditClicked(sender)
     }
 
     @IBAction func onCompareClickUp(sender: UIButton) {
-        imagePresenter.onCompareClickUp(sender)
+        presenter.onCompareClickUp(sender)
     }
 
     @IBAction func onCompareClickDown(sender: UIButton) {
-        imagePresenter.onCompareClickDown(sender)
+        presenter.onCompareClickDown(sender)
     }
 
     override func viewDidLoad() {
@@ -46,9 +46,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         collectionView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         filteredImageView.translatesAutoresizingMaskIntoConstraints = false
         slider.translatesAutoresizingMaskIntoConstraints = false
-        imagePresenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
+        presenter = ImagePresenter(view: self, originalImage: originalImageView.image!)
         collectionView.dataSource = dataSource
-        //collectionView.delegate = CollectionViewDelegate()
+        collectionView.delegate = presenter
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         collectionView.collectionViewLayout = layout
@@ -89,7 +89,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
         dismissViewControllerAnimated(true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imagePresenter!.onImagePicked(image)
+            presenter!.onImagePicked(image)
         }
     }
 
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // MARK: Filter Menu
     @IBAction func onFilter(sender: UIButton) {
-        imagePresenter.onFilter(sender)
+        presenter.onFilter(sender)
     }
 
     func showCollectionView(show: Bool) {

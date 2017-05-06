@@ -19,8 +19,7 @@ class MyDataSource: NSObject, UICollectionViewDataSource {
 
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("foo", forIndexPath: indexPath) as! CollectionViewCell
-        let filter = filters[indexPath.item]
-        cell.imageView.image = Processor.getPredifinedFiltersByName(filter).apply(RGBAImage(image: defaultImage!)!).toUIImage()
+        cell.imageView.image = Processor.getPredifinedFiltersByName(filters[indexPath.item]).apply(RGBAImage(image: defaultImage!)!).toUIImage()
         return cell
     }
 
