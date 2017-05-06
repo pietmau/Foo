@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b7fe50-4860-41e9-8e90-aeac1376f2df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/CollectionView/CollectionViewCell.swift" afterPath="$PROJECT_DIR$/Filterer/CollectionView/CollectionViewCell.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/CollectionView/MyDataSource.swift" afterPath="$PROJECT_DIR$/Filterer/CollectionView/MyDataSource.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Filterer/MVP/Presenter.swift" afterPath="$PROJECT_DIR$/Filterer/MVP/Presenter.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +14,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6s_Plus_9.3_x86_64_1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1430">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="100" column="15" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Presenter.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -39,7 +47,6 @@
       <find>onIma</find>
       <find>setOr</find>
       <find>compa</find>
-      <find>compare</find>
       <find>hidden</find>
       <find>s</find>
       <find>swi</find>
@@ -50,6 +57,7 @@
       <find>predefined\[\&quot;Red 0\&quot;\] \= RedZero\(\)\n        predefined\[\&quot;Red Max\&quot;\] \= RedMax\(\)\n        predefined\[\&quot;Blue 0\&quot;\] \= BlueZero\(\)\n        predefined\[\&quot;Blue Max\&quot;\] \= BlueMax\(\)\n        predefined\[\&quot;Green 0\&quot;\] \= GreenZero\(\)\n        predefined\[\&quot;Green Max\&quot;\] \= GreenMax\(\)\n        predefined\[\&quot;Yellow Max\&quot;\] \= YellowMax\(\)\n        predefined\[\&quot;Yellow Min\&quot;\] \= YellowMin\(\)\n        predefined\[\&quot;Purple Max\&quot;\] \= PurpleMax\(\)\n        predefined\[\&quot;Purple Min\&quot;\] \= PurpleMin\(\)\n        predefined\[\&quot;Sky Max\&quot;\] \= SkyMax\(\)\n        predefined\[\&quot;Sky Min\&quot;\] \= SkyMin\(\)</find>
       <find>=</find>
       <find>fil</find>
+      <find>compare</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -86,8 +94,8 @@
         <option value="$PROJECT_DIR$/ActionSheetContainer.swift" />
         <option value="$PROJECT_DIR$/Filterer/CollectionView/CollectionViewCell.swift" />
         <option value="$PROJECT_DIR$/Filterer/CollectionView/MyDataSource.swift" />
-        <option value="$PROJECT_DIR$/Filterer/MVP/Presenter.swift" />
         <option value="$PROJECT_DIR$/Filterer/ViewController.swift" />
+        <option value="$PROJECT_DIR$/Filterer/MVP/Presenter.swift" />
       </list>
     </option>
   </component>
@@ -206,7 +214,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Filterer" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/mauriziopietrantuono/Documents/git/MOOCS/iOS App Development Basics/Filterer/Filterer/GenericFilter.swift&#10;PRE&#9;FILE&#9;file:///Users/mauriziopietrantuono/Documents/git/MOOCS/iOS App Development Basics/Filterer/Filterer/Presenter.swift" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/mauriziopietrantuono/Documents/git/MOOCS/iOS App Development Basics/Filterer/Filterer/MVP/Presenter.swift&#10;PRE&#9;FILE&#9;file:///Users/mauriziopietrantuono/Documents/git/MOOCS/iOS App Development Basics/Filterer/Filterer/Presenter.swift" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -299,7 +307,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65065000" />
+    <option name="totallyTimeSpent" value="65256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1427" height="824" extended-state="0" />
@@ -349,22 +357,22 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift</url>
-          <line>101</line>
+          <line>86</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift</url>
-          <line>62</line>
+          <line>52</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>69</line>
+          <line>66</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Filterer/ViewController.swift</url>
-          <line>68</line>
+          <line>65</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
@@ -648,14 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/MVP/View.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -682,16 +682,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Filterer/ViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1430">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="100" column="15" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Filterer/MVP/Presenter.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
           <folding />
         </state>
       </provider>

@@ -29,9 +29,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presenter.onCompareClickUp(sender)
     }
 
-    @IBAction func onCompareClickDown(sender: UIButton) {
-        presenter.onCompareClickDown(sender)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

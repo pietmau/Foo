@@ -79,7 +79,6 @@
                                                 </constraints>
                                                 <state key="normal" title="Compare"/>
                                                 <connections>
-                                                    <action selector="onCompareClickDown:" destination="BYZ-38-t0r" eventType="touchDown" id="CbY-OZ-f12"/>
                                                     <action selector="onCompareClickUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1r-3z-Bh3"/>
                                                 </connections>
                                             </button>
