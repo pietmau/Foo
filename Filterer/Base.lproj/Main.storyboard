@@ -161,17 +161,24 @@
                                     <action selector="onSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="lct-Gd-G3l"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9Q-Yy-p8U">
+                                <rect key="frame" x="0.0" y="20" width="600" height="492"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HVC-fv-o7I" firstAttribute="centerX" secondItem="JNF-wb-wwY" secondAttribute="centerX" id="3RQ-LJ-RPO"/>
                             <constraint firstAttribute="trailing" secondItem="JNF-wb-wwY" secondAttribute="trailing" id="4Uj-nU-89n"/>
+                            <constraint firstItem="T9Q-Yy-p8U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Ze-bN-YOg"/>
                             <constraint firstAttribute="trailing" secondItem="FRd-O6-fCb" secondAttribute="trailing" id="8hI-xe-Sdc"/>
+                            <constraint firstItem="T9Q-Yy-p8U" firstAttribute="bottom" secondItem="aND-Em-4Dd" secondAttribute="bottom" constant="-44" id="AH0-2c-JMM"/>
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AH5-w4-n1a"/>
                             <constraint firstItem="JNF-wb-wwY" firstAttribute="top" secondItem="aND-Em-4Dd" secondAttribute="bottom" id="GY2-gV-4Y4"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GkC-gd-2H4"/>
                             <constraint firstItem="FRd-O6-fCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HhA-KY-FzH"/>
                             <constraint firstItem="aND-Em-4Dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hr8-fN-WFn"/>
+                            <constraint firstAttribute="trailing" secondItem="T9Q-Yy-p8U" secondAttribute="trailing" id="Mox-Qa-UDO"/>
+                            <constraint firstItem="T9Q-Yy-p8U" firstAttribute="top" secondItem="FRd-O6-fCb" secondAttribute="top" id="MrD-vo-RBb"/>
                             <constraint firstItem="2bz-vO-2Oe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Riy-xF-C45">
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                             </constraint>
