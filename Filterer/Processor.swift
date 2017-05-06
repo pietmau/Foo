@@ -10,35 +10,46 @@ import Foundation
 import UIKit
 
 public class Processor {
-
-    private let image: RGBAImage
+    private var filters: [Filter] = []
+    private let filtersNames: [String] = ["Red 0", "Red Max", "Blue 0", "Blue Max", "Green 0", "Green Max",
+                                          "Yellow Max", "Yellow Min", "Purple Max", "Purple Min", "Sky Max", "Sky Min"]
+    private let image: RGBAImage?
 
     public init(image: UIImage) {
         self.image = RGBAImage(image: image)!
     }
 
-    var filters: [Filter] = []
+    public init() {
+        image = nil
+    }
 
-    public func applyFilter(filter: Filter) {
+    internal func applyFilter(filter: Filter) {
         filters.append(filter)
     }
 
-    public func run() -> UIImage? {
-        var result = image
-
+    internal func run() -> UIImage? {
+        var result = image!
         for filter in filters {
             result = filter.apply(result)
         }
         return result.toUIImage()
     }
 
-    public func applyPredifinedFiltersByName(filtername: String) -> Processor {
+    internal func applyPredifinedFiltersByName(filtername: String) -> Processor {
         applyFilter(PredifinedFilters().getPredifinedFilterbasedOnName(filtername))
         return self
     }
 
-    public static func getPredifinedFiltersByName(filtername: String) -> Filter {
+    internal func getPredifinedFiltersByName(filtername: String) -> Filter {
         return PredifinedFilters().getPredifinedFilterbasedOnName(filtername)
+    }
+
+    internal func getPredifinedFiltersByPosition(position: Int) -> Filter {
+        return PredifinedFilters().getPredifinedFilterbasedOnName(filtersNames[position])
+    }
+
+    internal func filterCount() ->Int{
+        return filtersNames.count
     }
 }
 

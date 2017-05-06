@@ -10,7 +10,8 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
     private var originalImage: UIKit.UIImage?
     private var filteredImage: UIKit.UIImage?
     private let view: View
-    private var currentFilter: String?
+    private var currentFilter: Filter?
+    private let processor = Processor()
 
     internal init(view: View, originalImage: UIKit.UIImage) {
         self.view = view
@@ -40,41 +41,6 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
             view.setCompareButtonSelected(true)
             view.showFilteredImageView(false)
         }
-    }
-
-    internal func onRedSelected() {
-        view.resetSlider()
-        currentFilter = "Red Max"
-        setAndShowUiFilteredImage(PredifinedFilters().getPredifinedFilterbasedOnName(currentFilter!)
-                .apply(RGBAImage(image: originalImage!)!).toUIImage())
-    }
-
-    internal func onBlueSelected() {
-        view.resetSlider()
-        currentFilter = "Blue Max"
-        setAndShowUiFilteredImage(PredifinedFilters().getPredifinedFilterbasedOnName(currentFilter!)
-                .apply(RGBAImage(image: originalImage!)!).toUIImage())
-    }
-
-    internal func onYellowSelected() {
-        view.resetSlider()
-        currentFilter = "Yellow Max"
-        setAndShowUiFilteredImage(PredifinedFilters().getPredifinedFilterbasedOnName(currentFilter!)
-                .apply(RGBAImage(image: originalImage!)!).toUIImage())
-    }
-
-    internal func onGreenSelected() {
-        view.resetSlider()
-        currentFilter = "Green Max"
-        setAndShowUiFilteredImage(PredifinedFilters().getPredifinedFilterbasedOnName(currentFilter!)
-                .apply(RGBAImage(image: originalImage!)!).toUIImage())
-    }
-
-    internal func onPurpleSelected() {
-        view.resetSlider()
-        currentFilter = "Purple Max"
-        setAndShowUiFilteredImage(PredifinedFilters().getPredifinedFilterbasedOnName(currentFilter!)
-                .apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
 
     private func setAndShowUiFilteredImage(image: UIImage?) {
@@ -120,14 +86,14 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
     }
 
     func onSliderMove(value: Float) {
-        setFilteredImage(PredifinedFilters().getPredifinedFilterbasedOnName(currentFilter!)
-                .setIntensity(value).apply(RGBAImage(image: originalImage!)!).toUIImage()!)
+        currentFilter = currentFilter!.setIntensity(value)
+        setFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage()!)
     }
 
-    
+
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+        view.resetSlider()
+        currentFilter = processor.getPredifinedFiltersByPosition(indexPath.item)
+        setAndShowUiFilteredImage(currentFilter!.apply(RGBAImage(image: originalImage!)!).toUIImage())
     }
-
-
 }
