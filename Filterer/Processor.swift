@@ -11,8 +11,7 @@ import UIKit
 
 public class Processor {
     private var filters: [Filter] = []
-    private let filtersNames: [String] = ["Red 0", "Red Max", "Blue 0", "Blue Max", "Green 0", "Green Max",
-                                          "Yellow Max", "Yellow Min", "Purple Max", "Purple Min", "Sky Max", "Sky Min"]
+    private let filtersNames: [String] = ["Red Max", "Blue Max", "Green Max", "Yellow Max", "Purple Max", "Sky Max"]
     private let image: RGBAImage?
     private let predefinedFilters = PredifinedFilters()
 
@@ -49,7 +48,7 @@ public class Processor {
         return predefinedFilters.getPredifinedFilterbasedOnName(filtersNames[position])
     }
 
-    internal func filterCount() ->Int{
+    internal func filterCount() -> Int {
         return filtersNames.count
     }
 }
