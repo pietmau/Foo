@@ -31,6 +31,14 @@ class ImagePresenter: NSObject, UICollectionViewDelegate {
 
     internal func onImagePicked(image: UIImage) {
         setOriginalImage(image)
+        view.showFilteredImageView(false)
+        view.showCollectionView(false)
+        view.showSlider(false)
+        view.setCompareButtonEnabled(false)
+        view.setCompareButtonEnabled(false)
+        view.setEditButtonEnabled(false)
+        view.setEditButtonEnabled(false)
+        currentFilter = nil
     }
 
     internal func onCompareClicked(button: UIButton) {
